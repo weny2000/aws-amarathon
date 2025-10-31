@@ -35,9 +35,19 @@ git push origin main
 
 ### 第三步：启用 GitHub Pages
 
-1. 仓库页面 → "Settings" → "Pages"
-2. Source 选择 "**GitHub Actions**"
-3. 等待自动部署完成
+1. 仓库页面 → "**Settings**" → "**Pages**"
+2. 在 **Source** 部分：
+   - ❌ 不要选择 "Deploy from a branch"
+   - ✅ 选择 "**GitHub Actions**"
+3. 点击 "**Save**"
+
+### 第三步补充：检查权限设置
+
+1. Settings → "**Actions**" → "**General**"
+2. 在 **Workflow permissions** 部分：
+   - ✅ 选择 "Read and write permissions"
+   - ✅ 勾选 "Allow GitHub Actions to create and approve pull requests"
+3. 点击 "**Save**"
 
 ### 第四步：访问网站
 
