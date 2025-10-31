@@ -90,17 +90,79 @@ function hideLoading() {
     AppState.isLoading = false;
 }
 
-// 加载数据
-async function loadData() {
-    showLoading();
+// 加载年份配置
+async function loadYearsConfig() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('data/years.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        AppState.eventsData = await response.json();
+        return await response.json();
+    } catch (error) {
+        console.warn('加载年份配置失败，使用默认配置:', error);
+        return {
+            availableYears: [2024, 2025],
+            defaultYear: 2024
+        };
+    }
+}
+
+// 加载单个年份数据
+async function loadYearData(year) {
+    try {
+        const response = await fetch(`data/${year}.json`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(`${year}年数据加载成功`);
+        return data;
+    } catch (error) {
+        console.error(`加载${year}年数据失败:`, error);
+        showNotification(`加载${year}年数据失败`, 'error');
+        return null;
+    }
+}
+
+// 加载所有数据
+async function loadData() {
+    showLoading();
+    try {
+        // 首先加载年份配置
+        const yearsConfig = await loadYearsConfig();
+        console.log('年份配置:', yearsConfig);
+        
+        // 设置默认年份
+        AppState.currentYear = yearsConfig.defaultYear;
+        currentYear = AppState.currentYear;
+        
+        // 加载所有年份的数据
+        const loadPromises = yearsConfig.availableYears.map(async (year) => {
+            const data = await loadYearData(year);
+            return { year, data };
+        });
+        
+        const results = await Promise.all(loadPromises);
+        
+        // 组装数据
+        AppState.eventsData = {};
+        results.forEach(({ year, data }) => {
+            if (data) {
+                AppState.eventsData[year] = data;
+            }
+        });
+        
         eventsData = AppState.eventsData;
-        console.log('数据加载成功:', Object.keys(eventsData));
+        
+        const loadedYears = Object.keys(eventsData);
+        console.log('所有数据加载完成:', loadedYears);
+        
+        if (loadedYears.length === 0) {
+            throw new Error('没有成功加载任何年份的数据');
+        }
+        
+        showNotification(`成功加载 ${loadedYears.join(', ')} 年度数据`, 'success');
+        
     } catch (error) {
         console.error('加载数据失败:', error);
         AppState.eventsData = getDefaultData();

@@ -27,3 +27,7 @@ yarn-error.log*
 # 备份文件
 *.bak
 *.backup
+
+# 旧数据文件（已迁移到data/目录）
+data.json.old
+data.json.backup

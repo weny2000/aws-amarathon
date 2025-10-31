@@ -1,0 +1,184 @@
+{
+  "banner": {
+    "image": "",
+    "alt": "Amarathon 2025"
+  },
+  "introduction": {
+    "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
+    "subtitle": "\"Amarathon\" 源于 \"Amazon\" 和 \"Marathon\" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
+    "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the Amazon Web Services China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+    "theme": "\"Innovation Unleashed\"",
+    "themeDescription": "今年的活动主题为 \"Innovation Unleashed\"，释放创新潜能，探索云计算与AI的无限可能！"
+  },
+  "announcement": {
+    "title": "2025 Amarathon 技术马拉松正式启动！",
+    "date": "2025年1月15日",
+    "description": "欢迎参加2025年度AWS技术马拉松活动！本次活动将聚焦生成式AI、云原生架构、数据智能等前沿技术领域，邀请业界顶尖专家分享实践经验，促进技术交流与创新。活动将于2025年全年举办，每季度一次线下交流会，覆盖全国主要城市。我们期待与您一起探索云计算的无限可能！"
+  },
+  "userGroups": [
+    {
+      "name": "北京UG",
+      "icon": "🏛️",
+      "count": 180
+    },
+    {
+      "name": "上海UG",
+      "icon": "🌆",
+      "count": 165
+    },
+    {
+      "name": "深圳UG",
+      "icon": "🌃",
+      "count": 152
+    },
+    {
+      "name": "杭州UG",
+      "icon": "🏞️",
+      "count": 118
+    },
+    {
+      "name": "成都UG",
+      "icon": "🐼",
+      "count": 105
+    },
+    {
+      "name": "广州UG",
+      "icon": "🌺",
+      "count": 92
+    },
+    {
+      "name": "南京UG",
+      "icon": "🏯",
+      "count": 68
+    },
+    {
+      "name": "西安UG",
+      "icon": "🏛️",
+      "count": 54
+    }
+  ],
+  "gallery": [
+    {
+      "image": "",
+      "caption": "2025活动启动仪式"
+    },
+    {
+      "image": "",
+      "caption": "生成式AI主题分享"
+    },
+    {
+      "image": "",
+      "caption": "云原生实战工作坊"
+    },
+    {
+      "image": "",
+      "caption": "技术圆桌讨论"
+    },
+    {
+      "image": "",
+      "caption": "Hackathon现场"
+    },
+    {
+      "image": "",
+      "caption": "社区交流活动"
+    }
+  ],
+  "agenda": [
+    {
+      "time": "09:00 - 09:30",
+      "title": "开幕式及主题演讲",
+      "speaker": "AWS中国团队",
+      "description": "2025年度活动开场，分享AWS最新技术趋势和创新方向。"
+    },
+    {
+      "time": "09:30 - 10:30",
+      "title": "生成式AI应用开发实战",
+      "speaker": "孙杰 - AWS AI/ML首席架构师",
+      "description": "深入探讨生成式AI技术原理，演示如何使用Amazon Bedrock构建智能应用，包括对话系统、内容生成、代码助手等场景。"
+    },
+    {
+      "time": "10:30 - 11:30",
+      "title": "云原生架构演进之路",
+      "speaker": "周琳 - AWS解决方案架构师",
+      "description": "分享云原生架构的最新发展趋势，介绍EKS、ECS、App Runner等服务的最佳实践，帮助企业实现应用现代化。"
+    },
+    {
+      "time": "11:30 - 12:30",
+      "title": "午餐及技术交流",
+      "speaker": "",
+      "description": "自由交流时间，与讲师和其他参与者深入探讨技术问题。"
+    },
+    {
+      "time": "12:30 - 13:30",
+      "title": "数据智能与实时分析",
+      "speaker": "吴涛 - AWS数据分析专家",
+      "description": "介绍AWS数据分析服务生态，演示如何构建实时数据管道，实现数据驱动的业务决策。"
+    },
+    {
+      "time": "13:30 - 14:30",
+      "title": "边缘计算与IoT创新",
+      "speaker": "马丽 - AWS IoT专家",
+      "description": "探讨边缘计算在IoT场景中的应用，分享AWS IoT服务的架构设计和实践案例。"
+    },
+    {
+      "time": "14:30 - 15:30",
+      "title": "云安全与合规实践",
+      "speaker": "郑浩 - AWS安全架构师",
+      "description": "分享云安全最佳实践，介绍如何使用AWS安全服务构建零信任架构，满足合规要求。"
+    },
+    {
+      "time": "15:30 - 17:00",
+      "title": "动手实验：构建生成式AI应用",
+      "speaker": "AWS技术团队",
+      "description": "参与者动手实践，使用Amazon Bedrock和其他AWS服务构建一个完整的生成式AI应用。"
+    },
+    {
+      "time": "17:00 - 17:30",
+      "title": "圆桌讨论与Q&A",
+      "speaker": "全体讲师",
+      "description": "开放式讨论环节，解答参与者的技术问题，分享行业洞察。"
+    }
+  ],
+  "committee": [
+    {
+      "name": "孙杰",
+      "title": "组委会主席",
+      "bio": "AWS首席解决方案架构师，云计算和AI领域专家，致力于推动技术创新和社区发展。"
+    },
+    {
+      "name": "周琳",
+      "title": "技术委员会主任",
+      "bio": "AWS高级解决方案架构师，云原生技术布道师，拥有丰富的企业架构设计经验。"
+    },
+    {
+      "name": "吴涛",
+      "title": "数据智能委员会负责人",
+      "bio": "AWS数据分析专家，专注于大数据、数据湖和实时分析技术的应用和推广。"
+    },
+    {
+      "name": "马丽",
+      "title": "IoT与边缘计算委员会负责人",
+      "bio": "AWS IoT专家，在物联网和边缘计算领域有深厚的技术积累和实践经验。"
+    },
+    {
+      "name": "郑浩",
+      "title": "安全与合规委员会负责人",
+      "bio": "AWS安全架构师，云安全和合规领域资深专家，帮助企业构建安全可信的云环境。"
+    },
+    {
+      "name": "林雪",
+      "title": "社区运营负责人",
+      "bio": "AWS开发者社区负责人，负责全国用户组运营和技术活动组织，连接开发者生态。"
+    },
+    {
+      "name": "黄磊",
+      "title": "内容与传播负责人",
+      "bio": "AWS技术内容专家，负责技术文章、视频和案例的策划与制作，传播云计算知识。"
+    },
+    {
+      "name": "钱颖",
+      "title": "合作伙伴关系负责人",
+      "bio": "AWS合作伙伴经理，负责与企业、高校和技术社区的合作，扩大活动影响力。"
+    }
+  ]
+}

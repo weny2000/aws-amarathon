@@ -1,0 +1,71 @@
+{
+  "banner": {
+    "image": "",
+    "alt": "Amarathon YYYY"
+  },
+  "introduction": {
+    "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
+    "subtitle": "\"Amarathon\" 源于 \"Amazon\" 和 \"Marathon\" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
+    "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the Amazon Web Services China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+    "theme": "\"主题名称\"",
+    "themeDescription": "今年的活动主题描述"
+  },
+  "announcement": {
+    "title": "YYYY Amarathon 技术马拉松活动标题",
+    "date": "YYYY年MM月DD日",
+    "description": "活动描述内容..."
+  },
+  "userGroups": [
+    {
+      "name": "北京UG",
+      "icon": "🏛️",
+      "count": 0
+    },
+    {
+      "name": "上海UG",
+      "icon": "🌆",
+      "count": 0
+    },
+    {
+      "name": "深圳UG",
+      "icon": "🌃",
+      "count": 0
+    },
+    {
+      "name": "杭州UG",
+      "icon": "🏞️",
+      "count": 0
+    },
+    {
+      "name": "成都UG",
+      "icon": "🐼",
+      "count": 0
+    },
+    {
+      "name": "广州UG",
+      "icon": "🌺",
+      "count": 0
+    }
+  ],
+  "gallery": [
+    {
+      "image": "",
+      "caption": "活动现场"
+    }
+  ],
+  "agenda": [
+    {
+      "time": "09:00 - 09:30",
+      "title": "开幕式",
+      "speaker": "AWS中国团队",
+      "description": "活动开场介绍"
+    }
+  ],
+  "committee": [
+    {
+      "name": "姓名",
+      "title": "职位",
+      "bio": "个人简介"
+    }
+  ]
+}
