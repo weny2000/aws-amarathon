@@ -1,0 +1,1011 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --aws-orange: #FF9900;
+    --aws-dark: #232F3E;
+    --aws-light-gray: #F2F3F3;
+    --aws-border: #D5DBDB;
+    --text-primary: #16191F;
+    --text-secondary: #545B64;
+}
+
+body {
+    font-family: 'Amazon Ember', 'Helvetica Neue', Roboto, Arial, 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 顶部导航 */
+.top-nav {
+    background: var(--aws-dark);
+    padding: 16px 0;
+    border-bottom: 3px solid var(--aws-orange);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.aws-logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.divider {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.site-name {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Hero 区域 */
+.hero {
+    background: linear-gradient(135deg, var(--aws-dark) 0%, #37475A 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* 年度选择器 */
+.year-selector-section {
+    background: var(--aws-light-gray);
+    border-bottom: 1px solid var(--aws-border);
+    padding: 0;
+}
+
+.year-tabs {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+}
+
+.year-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    position: relative;
+}
+
+.year-btn:hover {
+    background: rgba(255, 153, 0, 0.05);
+    color: var(--text-primary);
+}
+
+.year-btn.active {
+    color: var(--aws-orange);
+    border-bottom-color: var(--aws-orange);
+    background: #fff;
+}
+
+/* 子导航 */
+.sub-nav-section {
+    background: #fff;
+    border-bottom: 1px solid var(--aws-border);
+    padding: 0;
+}
+
+.sub-nav-tabs {
+    display: flex;
+    gap: 0;
+}
+
+.sub-nav-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+}
+
+.sub-nav-btn:hover {
+    background: var(--aws-light-gray);
+    color: var(--text-primary);
+}
+
+.sub-nav-btn.active {
+    color: var(--aws-orange);
+    border-bottom-color: var(--aws-orange);
+    font-weight: 500;
+}
+
+/* 标签页内容 */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 主内容区 */
+main {
+    padding: 48px 24px;
+    background: #fff;
+}
+
+.section {
+    margin-bottom: 48px;
+}
+
+.section-header {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--aws-light-gray);
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+/* 活动介绍 */
+.introduction-section {
+    margin-bottom: 32px;
+}
+
+.introduction-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.intro-title {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.intro-title::before {
+    content: '"';
+    color: var(--aws-orange);
+    font-weight: bold;
+}
+
+.intro-subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.intro-subtitle-en {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.intro-theme {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 24px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 20px;
+}
+
+.theme-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.theme-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: white;
+    opacity: 0.95;
+}
+
+/* 直播安排 */
+.live-schedule-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.live-schedule-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    padding: 32px;
+    color: white;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.event-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.event-date-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.timezone {
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.datetime {
+    font-weight: 400;
+}
+
+.card-content {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.description-cn {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.description-en {
+    margin-bottom: 16px;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+.details {
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.interaction-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.link-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.twitter-handle {
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.terms-link {
+    color: white;
+    text-decoration: underline;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.terms-link:hover {
+    opacity: 1;
+}
+
+/* 响应式 - 直播安排 */
+@media (max-width: 768px) {
+    .live-schedule-card {
+        padding: 24px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .event-date-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .timezone {
+        min-width: auto;
+    }
+    
+    .interaction-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+/* 直播状态 */
+.live-status-section {
+    margin-bottom: 32px;
+}
+
+.live-status-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.status-buttons {
+    margin-bottom: 16px;
+}
+
+.status-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.status-btn.disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.replay-info {
+    margin-bottom: 16px;
+}
+
+.replay-link {
+    color: var(--aws-orange);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.replay-link:hover {
+    text-decoration: underline;
+}
+
+.community-links {
+    margin-bottom: 12px;
+}
+
+.community-link {
+    color: var(--aws-orange);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.community-link:hover {
+    text-decoration: underline;
+}
+
+.terms-info {
+    font-size: 12px;
+}
+
+.terms-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* 合作伙伴 */
+.partners-section {
+    margin-bottom: 32px;
+}
+
+.partners-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.partner-category {
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.partner-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.partner-logo-link {
+    display: block;
+    transition: transform 0.2s;
+}
+
+.partner-logo-link:hover {
+    transform: scale(1.05);
+}
+
+.partner-logo {
+    height: 60px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* 响应式 - 合作伙伴 */
+@media (max-width: 768px) {
+    .partner-logos {
+        gap: 16px;
+    }
+    
+    .partner-logo {
+        height: 40px;
+        max-width: 120px;
+    }
+}
+
+/* 活动召集 */
+.announcement-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-left: 4px solid var(--aws-orange);
+    padding: 24px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.announcement-card h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.announcement-card .date {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.announcement-card .description {
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+/* 活动内容 */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 2px;
+    padding: 24px;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.content-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-color: var(--aws-orange);
+}
+
+.content-card h4 {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content-card .speaker {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.content-card .description {
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* 参与人员 */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.participant-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.participant-card:hover {
+    background: var(--aws-light-gray);
+    border-color: var(--aws-orange);
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--aws-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.participant-info h5 {
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.participant-info .role {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* 页脚 */
+.footer {
+    background: var(--aws-dark);
+    color: #fff;
+    padding: 32px 0;
+    margin-top: 64px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 48px;
+    color: var(--text-secondary);
+    background: var(--aws-light-gray);
+    border-radius: 2px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .year-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+    
+    .content-grid,
+    .participants-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+}
+
+/* 活动横幅 */
+.banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.banner-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, var(--aws-dark) 0%, #37475A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    border-radius: 2px;
+}
+
+/* UG 图表 */
+.ug-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.ug-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 2px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.ug-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-color: var(--aws-orange);
+}
+
+.ug-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.ug-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.ug-count {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--aws-orange);
+}
+
+.ug-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* 活动图片画廊 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 200px;
+    background: var(--aws-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 48px;
+}
+
+.gallery-caption {
+    padding: 12px;
+    background: #fff;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+/* 演讲议程 */
+.agenda-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.agenda-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--aws-border);
+}
+
+.agenda-item {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.agenda-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--aws-orange);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px var(--aws-orange);
+}
+
+.agenda-time {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--aws-orange);
+    margin-bottom: 8px;
+}
+
+.agenda-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.agenda-speaker {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.agenda-description {
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+/* 组委会成员 */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.committee-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 2px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.committee-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-color: var(--aws-orange);
+}
+
+.committee-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--aws-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 auto 16px;
+}
+
+.committee-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.committee-title {
+    font-size: 16px;
+    color: var(--aws-orange);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.committee-bio {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* SPA 加载和通知样式 */
+.loading-spinner {
+    text-align: center;
+    padding: 60px;
+    font-size: 18px;
+    color: var(--text-secondary);
+    animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-info {
+    background: #2196F3;
+}
+
+.notification-warning {
+    background: #FF9800;
+}
+
+.notification-error {
+    background: #F44336;
+}
+
+.notification-success {
+    background: #4CAF50;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 平滑过渡效果 */
+.tab-content {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content:not(.active) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tab-content.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 年度按钮和标签页按钮的过渡效果 */
+.year-btn, .sub-nav-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.year-btn:hover, .sub-nav-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .sub-nav-tabs {
+        overflow-x: auto;
+    }
+    
+    .ug-grid,
+    .gallery-grid,
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .agenda-timeline {
+        padding-left: 30px;
+    }
+}

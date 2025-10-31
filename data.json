@@ -1,0 +1,452 @@
+{
+  "2024": {
+    "banner": {
+      "image": "",
+      "alt": "Amarathon 2024"
+    },
+    "introduction": {
+      "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
+      "subtitle": "\"Amarathon\" 源于 "Amazon" 和 "Marathon" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
+      "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the Amazon Web Services China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+      "theme": "\"No Border\"",
+      "themeDescription": "今年的活动主题为 \"No Border\"，无论你们都在哪，无论你们自哪里，"亚跑拉松"打破地域、国家和语言的限制，一起奔跑狂欢！"
+    },
+    "liveStatus": {
+      "status": "直播已结束（Live Ended）",
+      "replayLink": "https://space.bilibili.com/418158141/channel/collectiondetail?sid=4250716",
+      "replayDescription": "观看直播回放单人cut，欢迎访问B站Amarathon专题页"
+    },
+    "slackInvite": {
+      "link": "https://join.slack.com/t/awsgcrusergroup/shared_invite/zt-2uepy27c7-VRAm~lXBByNhFGnQdTx6aA",
+      "description": "加入AWS GCR User Group Slack社区"
+    },
+    "termsLink": "https://dev-media.amazoncloud.cn/terms-of-events/terms%20and%20conditions.pdf",
+    "partners": {
+      "liveAlliance": {
+        "title": "12 小时直播联盟",
+        "partners": [
+          {
+            "name": "InfoQ",
+            "link": "https://www.infoq.cn/",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_infoq.14eb97e.png"
+          },
+          {
+            "name": "SegmentFault",
+            "link": "https://segmentfault.com/",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_segmentfault.0446169.png"
+          },
+          {
+            "name": "ITPUB",
+            "link": "https://www.itpub.net",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_itpub.331afd5.png"
+          },
+          {
+            "name": "GitCode",
+            "link": "https://gitcode.com/",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_gitcode.2482669.png"
+          },
+          {
+            "name": "MSUP",
+            "link": "https://msup.com.cn/",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_msup.c40080f.png"
+          },
+          {
+            "name": "RTE Community",
+            "link": "https://www.rtecommunity.dev",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_rte.b581e54.png"
+          }
+        ]
+      },
+      "platinumSponsor": {
+        "title": "铂金赞助",
+        "partners": [
+          {
+            "name": "微信视频号",
+            "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_simba.50e5ee5.png"
+          }
+        ]
+      },
+      "communityPartners": {
+        "title": "社区合作",
+        "partners": [
+          {
+            "name": "开源中国",
+            "link": "https://www.oschina.net/",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_oschina.99845f6.png"
+          },
+          {
+            "name": "CSDN",
+            "link": "https://www.csdn.net",
+            "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_csdn.e6b08ca.png"
+          }
+        ]
+      }
+    },
+    "announcement": {
+      "title": "2024 Amarathon 技术马拉松圆满结束",
+      "date": "2024年12月20日",
+      "description": "2024年度AWS技术马拉松活动已圆满结束！本次活动汇聚了来自全国各地的云计算爱好者和技术专家，共同探讨云原生、人工智能、大数据等前沿技术。活动期间举办了多场技术分享、动手实验和交流活动，参与者收获满满。感谢所有参与者、讲师和志愿者的支持！"
+    },
+    "liveSchedule": {
+      "eventDates": [
+        {
+          "timezone": "GMT(UTC+0)",
+          "date": "2024/11/23 (Sat) 04:00 - 2024/11/23 (Sat) 16:00"
+        },
+        {
+          "timezone": "BJT(UTC+8)",
+          "date": "2024/11/23 (Sat) 12:00 - 2024/11/24 (Sun) 00:00"
+        },
+        {
+          "timezone": "PDT(UTC-8)",
+          "date": "2024/11/22 (Fri) 20:00 - 2024/11/23 (Sat) 08:00"
+        }
+      ],
+      "livestreamInteraction": {
+        "title": "直播互动 Livestream Interaction",
+        "description": "参与"宝藏大挑战"，注册并打卡，获得AWS服务Credit及徽章奖励，赢取云端技能提升机会！",
+        "descriptionEn": "Participate in the \"Treasure Hunt Challenge\" - receive a flood of benefits and have a chance to win Amazon Web Services Credit (giveaway)! Specific gamer rules will be revealed soon!",
+        "details": "关注User Group公众号，在推送的文章中找到"宝藏挑战"入口并注册，然后在Twitter上关注并转发我们的最新Amarathon帖子。",
+        "link": "https://x.io/track.php?v=8/2024/2025/22-23/aws-AWSUserGroupsSEA/GaGe5pGA",
+        "twitter": "@CNUG_MoreHomo",
+        "termsLink": "Terms and Guidelines"
+      },
+      "realTimeTranslation": {
+        "title": "实时翻译 Real-time Translation",
+        "description": "可以通过每位演讲者的演示文稿中的"实时语言"选项卡找到实时流消息，其中包括中英文实时翻译服务，为所有演示提供中英文字幕。",
+        "descriptionEn": "Each speaker gives their presentation in their local language, and the live stream message will include real-time translation services, providing both Chinese and English subtitles for all presentations."
+      }
+    },
+    "userGroups": [
+      {
+        "name": "北京UG",
+        "icon": "🏛️",
+        "count": 156
+      },
+      {
+        "name": "上海UG",
+        "icon": "🌆",
+        "count": 142
+      },
+      {
+        "name": "深圳UG",
+        "icon": "🌃",
+        "count": 128
+      },
+      {
+        "name": "杭州UG",
+        "icon": "🏞️",
+        "count": 98
+      },
+      {
+        "name": "成都UG",
+        "icon": "🐼",
+        "count": 87
+      },
+      {
+        "name": "广州UG",
+        "icon": "🌺",
+        "count": 76
+      }
+    ],
+    "gallery": [
+      {
+        "image": "",
+        "caption": "开幕式现场"
+      },
+      {
+        "image": "",
+        "caption": "技术分享环节"
+      },
+      {
+        "image": "",
+        "caption": "动手实验室"
+      },
+      {
+        "image": "",
+        "caption": "参与者交流"
+      },
+      {
+        "image": "",
+        "caption": "颁奖典礼"
+      },
+      {
+        "image": "",
+        "caption": "集体合影"
+      }
+    ],
+    "agenda": [
+      {
+        "time": "09:00 - 09:30",
+        "title": "开幕式及欢迎致辞",
+        "speaker": "AWS中国团队",
+        "description": "活动开场，介绍Amarathon活动背景、目标和日程安排。"
+      },
+      {
+        "time": "09:30 - 10:30",
+        "title": "云原生架构最佳实践",
+        "speaker": "张伟 - AWS解决方案架构师",
+        "description": "深入探讨云原生架构设计模式，分享容器化、微服务、DevOps等实践经验，帮助企业实现数字化转型。"
+      },
+      {
+        "time": "10:30 - 11:30",
+        "title": "Serverless架构实战",
+        "speaker": "李明 - AWS技术专家",
+        "description": "介绍无服务器架构的设计理念和实际应用案例，演示如何使用AWS Lambda、API Gateway等服务构建高可用应用。"
+      },
+      {
+        "time": "11:30 - 12:30",
+        "title": "午餐及自由交流",
+        "speaker": "",
+        "description": "参与者自由交流，建立技术社区联系。"
+      },
+      {
+        "time": "12:30 - 13:30",
+        "title": "AI与机器学习在云端的应用",
+        "speaker": "王芳 - AWS AI/ML专家",
+        "description": "分享AWS机器学习服务的应用场景，演示如何使用SageMaker构建、训练和部署机器学习模型。"
+      },
+      {
+        "time": "13:30 - 14:30",
+        "title": "容器安全最佳实践",
+        "speaker": "陈强 - AWS安全专家",
+        "description": "探讨容器环境下的安全挑战和解决方案，分享EKS、ECS等服务的安全配置和最佳实践。"
+      },
+      {
+        "time": "14:30 - 15:30",
+        "title": "数据湖架构设计",
+        "speaker": "刘洋 - AWS数据架构师",
+        "description": "介绍企业级数据湖的架构设计思路，包括数据治理、安全合规、性能优化等关键要素。"
+      },
+      {
+        "time": "15:30 - 16:30",
+        "title": "动手实验：构建云原生应用",
+        "speaker": "AWS技术团队",
+        "description": "参与者动手实践，使用AWS服务构建一个完整的云原生应用，包括容器化、CI/CD、监控等环节。"
+      },
+      {
+        "time": "16:30 - 17:00",
+        "title": "闭幕式及颁奖",
+        "speaker": "AWS中国团队",
+        "description": "活动总结，为优秀参与者和贡献者颁奖，宣布下一年度活动计划。"
+      }
+    ],
+    "committee": [
+      {
+        "name": "张伟",
+        "title": "组委会主席",
+        "bio": "AWS解决方案架构师，拥有15年云计算行业经验，专注于云原生架构和企业数字化转型。"
+      },
+      {
+        "name": "李明",
+        "title": "技术委员会主任",
+        "bio": "AWS高级技术专家，Serverless架构布道师，热衷于推广云计算技术在各行业的应用。"
+      },
+      {
+        "name": "王芳",
+        "title": "AI/ML委员会负责人",
+        "bio": "AWS机器学习专家，深耕AI领域10年，帮助众多企业实现智能化升级。"
+      },
+      {
+        "name": "陈强",
+        "title": "安全委员会负责人",
+        "bio": "AWS安全架构师，云安全领域资深专家，致力于帮助企业构建安全可靠的云环境。"
+      },
+      {
+        "name": "刘洋",
+        "title": "数据委员会负责人",
+        "bio": "AWS数据架构师，大数据和数据湖专家，在数据治理和分析领域有丰富实践经验。"
+      },
+      {
+        "name": "赵敏",
+        "title": "社区运营负责人",
+        "bio": "AWS开发者社区经理，负责用户组运营和技术社区建设，连接开发者与云计算技术。"
+      }
+    ]
+  },
+  "2025": {
+    "banner": {
+      "image": "",
+      "alt": "Amarathon 2025"
+    },
+    "introduction": {
+      "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
+      "subtitle": "\"Amarathon\" 源于 "Amazon" 和 "Marathon" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
+      "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the Amazon Web Services China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+      "theme": "\"Innovation Unleashed\"",
+      "themeDescription": "今年的活动主题为 \"Innovation Unleashed\"，释放创新潜能，探索云计算与AI的无限可能！"
+    },
+    "announcement": {
+      "title": "2025 Amarathon 技术马拉松正式启动！",
+      "date": "2025年1月15日",
+      "description": "欢迎参加2025年度AWS技术马拉松活动！本次活动将聚焦生成式AI、云原生架构、数据智能等前沿技术领域，邀请业界顶尖专家分享实践经验，促进技术交流与创新。活动将于2025年全年举办，每季度一次线下交流会，覆盖全国主要城市。我们期待与您一起探索云计算的无限可能！"
+    },
+    "userGroups": [
+      {
+        "name": "北京UG",
+        "icon": "🏛️",
+        "count": 180
+      },
+      {
+        "name": "上海UG",
+        "icon": "🌆",
+        "count": 165
+      },
+      {
+        "name": "深圳UG",
+        "icon": "🌃",
+        "count": 152
+      },
+      {
+        "name": "杭州UG",
+        "icon": "🏞️",
+        "count": 118
+      },
+      {
+        "name": "成都UG",
+        "icon": "🐼",
+        "count": 105
+      },
+      {
+        "name": "广州UG",
+        "icon": "🌺",
+        "count": 92
+      },
+      {
+        "name": "南京UG",
+        "icon": "🏯",
+        "count": 68
+      },
+      {
+        "name": "西安UG",
+        "icon": "🏛️",
+        "count": 54
+      }
+    ],
+    "gallery": [
+      {
+        "image": "",
+        "caption": "2025活动启动仪式"
+      },
+      {
+        "image": "",
+        "caption": "生成式AI主题分享"
+      },
+      {
+        "image": "",
+        "caption": "云原生实战工作坊"
+      },
+      {
+        "image": "",
+        "caption": "技术圆桌讨论"
+      },
+      {
+        "image": "",
+        "caption": "Hackathon现场"
+      },
+      {
+        "image": "",
+        "caption": "社区交流活动"
+      }
+    ],
+    "agenda": [
+      {
+        "time": "09:00 - 09:30",
+        "title": "开幕式及主题演讲",
+        "speaker": "AWS中国团队",
+        "description": "2025年度活动开场，分享AWS最新技术趋势和创新方向。"
+      },
+      {
+        "time": "09:30 - 10:30",
+        "title": "生成式AI应用开发实战",
+        "speaker": "孙杰 - AWS AI/ML首席架构师",
+        "description": "深入探讨生成式AI技术原理，演示如何使用Amazon Bedrock构建智能应用，包括对话系统、内容生成、代码助手等场景。"
+      },
+      {
+        "time": "10:30 - 11:30",
+        "title": "云原生架构演进之路",
+        "speaker": "周琳 - AWS解决方案架构师",
+        "description": "分享云原生架构的最新发展趋势，介绍EKS、ECS、App Runner等服务的最佳实践，帮助企业实现应用现代化。"
+      },
+      {
+        "time": "11:30 - 12:30",
+        "title": "午餐及技术交流",
+        "speaker": "",
+        "description": "自由交流时间，与讲师和其他参与者深入探讨技术问题。"
+      },
+      {
+        "time": "12:30 - 13:30",
+        "title": "数据智能与实时分析",
+        "speaker": "吴涛 - AWS数据分析专家",
+        "description": "介绍AWS数据分析服务生态，演示如何构建实时数据管道，实现数据驱动的业务决策。"
+      },
+      {
+        "time": "13:30 - 14:30",
+        "title": "边缘计算与IoT创新",
+        "speaker": "马丽 - AWS IoT专家",
+        "description": "探讨边缘计算在IoT场景中的应用，分享AWS IoT服务的架构设计和实践案例。"
+      },
+      {
+        "time": "14:30 - 15:30",
+        "title": "云安全与合规实践",
+        "speaker": "郑浩 - AWS安全架构师",
+        "description": "分享云安全最佳实践，介绍如何使用AWS安全服务构建零信任架构，满足合规要求。"
+      },
+      {
+        "time": "15:30 - 17:00",
+        "title": "动手实验：构建生成式AI应用",
+        "speaker": "AWS技术团队",
+        "description": "参与者动手实践，使用Amazon Bedrock和其他AWS服务构建一个完整的生成式AI应用。"
+      },
+      {
+        "time": "17:00 - 17:30",
+        "title": "圆桌讨论与Q&A",
+        "speaker": "全体讲师",
+        "description": "开放式讨论环节，解答参与者的技术问题，分享行业洞察。"
+      }
+    ],
+    "committee": [
+      {
+        "name": "孙杰",
+        "title": "组委会主席",
+        "bio": "AWS首席解决方案架构师，云计算和AI领域专家，致力于推动技术创新和社区发展。"
+      },
+      {
+        "name": "周琳",
+        "title": "技术委员会主任",
+        "bio": "AWS高级解决方案架构师，云原生技术布道师，拥有丰富的企业架构设计经验。"
+      },
+      {
+        "name": "吴涛",
+        "title": "数据智能委员会负责人",
+        "bio": "AWS数据分析专家，专注于大数据、数据湖和实时分析技术的应用和推广。"
+      },
+      {
+        "name": "马丽",
+        "title": "IoT与边缘计算委员会负责人",
+        "bio": "AWS IoT专家，在物联网和边缘计算领域有深厚的技术积累和实践经验。"
+      },
+      {
+        "name": "郑浩",
+        "title": "安全与合规委员会负责人",
+        "bio": "AWS安全架构师，云安全和合规领域资深专家，帮助企业构建安全可信的云环境。"
+      },
+      {
+        "name": "林雪",
+        "title": "社区运营负责人",
+        "bio": "AWS开发者社区负责人，负责全国用户组运营和技术活动组织，连接开发者生态。"
+      },
+      {
+        "name": "黄磊",
+        "title": "内容与传播负责人",
+        "bio": "AWS技术内容专家，负责技术文章、视频和案例的策划与制作，传播云计算知识。"
+      },
+      {
+        "name": "钱颖",
+        "title": "合作伙伴关系负责人",
+        "bio": "AWS合作伙伴经理，负责与企业、高校和技术社区的合作，扩大活动影响力。"
+      }
+    ]
+  }
+}

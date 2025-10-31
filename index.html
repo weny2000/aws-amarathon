@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amarathon - AWS 技术马拉松</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="logo">
+                <span class="aws-logo">AWS</span>
+                <span class="divider">|</span>
+                <span class="site-name">Amarathon</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="container">
+            <h1>Amarathon</h1>
+            <p class="hero-subtitle">AWS 技术马拉松 - 探索云计算的无限可能</p>
+        </div>
+    </section>
+
+    <!-- 年度选择器 -->
+    <section class="year-selector-section">
+        <div class="container">
+            <div class="year-tabs" id="yearButtons"></div>
+        </div>
+    </section>
+
+    <!-- 子导航 -->
+    <section class="sub-nav-section">
+        <div class="container">
+            <div class="sub-nav-tabs" id="subNavTabs">
+                <button class="sub-nav-btn active" onclick="selectTab('home')">活动主页</button>
+                <button class="sub-nav-btn" onclick="selectTab('agenda')">演讲议程</button>
+                <button class="sub-nav-btn" onclick="selectTab('committee')">Amarathon组委会</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 活动主页 -->
+        <div id="homeTab" class="tab-content active">
+            <!-- 活动横幅 -->
+            <section class="section banner-section">
+                <div id="bannerContent"></div>
+            </section>
+
+            <!-- 活动介绍 -->
+            <section class="section introduction-section">
+                <div id="introductionContent"></div>
+            </section>
+
+            <!-- 直播安排 -->
+            <section class="section live-schedule-section">
+                <div class="section-header">
+                    <h2>直播安排 Live Schedule</h2>
+                </div>
+                <div id="liveScheduleContent"></div>
+            </section>
+
+            <!-- 直播状态 -->
+            <section class="section live-status-section">
+                <div id="liveStatusContent"></div>
+            </section>
+
+            <!-- 合作伙伴 -->
+            <section class="section partners-section">
+                <div class="section-header">
+                    <h2>合作伙伴</h2>
+                </div>
+                <div id="partnersContent"></div>
+            </section>
+
+            <!-- 活动召集 -->
+            <section class="section announcement-section">
+                <div class="section-header">
+                    <h2>活动召集</h2>
+                </div>
+                <div id="announcementContent"></div>
+            </section>
+
+            <!-- UG 图表 -->
+            <section class="section ug-section">
+                <div class="section-header">
+                    <h2>用户组分布</h2>
+                </div>
+                <div id="ugContent"></div>
+            </section>
+
+            <!-- 活动图片 -->
+            <section class="section gallery-section">
+                <div class="section-header">
+                    <h2>活动精彩瞬间</h2>
+                </div>
+                <div id="galleryContent"></div>
+            </section>
+        </div>
+
+        <!-- 演讲议程 -->
+        <div id="agendaTab" class="tab-content">
+            <section class="section agenda-section">
+                <div class="section-header">
+                    <h2>演讲议程</h2>
+                </div>
+                <div id="agendaContent"></div>
+            </section>
+        </div>
+
+        <!-- Amarathon组委会 -->
+        <div id="committeeTab" class="tab-content">
+            <section class="section committee-section">
+                <div class="section-header">
+                    <h2>Amarathon组委会</h2>
+                </div>
+                <div id="committeeContent"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
