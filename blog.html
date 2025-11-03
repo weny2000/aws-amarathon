@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动精彩瞬间 - Amarathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .blog-header h1 {
+            font-size: 36px;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .blog-content {
+            background: #fff;
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            line-height: 1.8;
+        }
+        
+        .blog-content h1 {
+            font-size: 32px;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid var(--aws-orange);
+        }
+        
+        .blog-content h2 {
+            font-size: 24px;
+            color: var(--text-primary);
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .blog-content h3 {
+            font-size: 20px;
+            color: var(--text-primary);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .blog-content p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 24px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 16px;
+            padding-left: 32px;
+        }
+        
+        .blog-content li {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid var(--aws-orange);
+            padding-left: 20px;
+            margin: 24px 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        
+        .blog-content code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .blog-content pre {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .blog-content hr {
+            border: none;
+            border-top: 1px solid var(--aws-border);
+            margin: 32px 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--aws-orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-secondary);
+        }
+        
+        .error {
+            text-align: center;
+            padding: 60px;
+            color: #f44336;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="logo">
+                <span class="aws-logo">AWS</span>
+                <span class="divider">|</span>
+                <span class="site-name">Amarathon</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← 返回主页</a>
+        <div class="blog-header">
+            <h1>活动精彩瞬间</h1>
+        </div>
+        <div id="blogContent" class="blog-content">
+            <div class="loading">加载中...</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function loadBlogPost() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const year = urlParams.get('year') || '2025';
+            const post = urlParams.get('post') || 'welcome';
+            
+            const blogContent = document.getElementById('blogContent');
+            
+            try {
+                const response = await fetch(`blog/${year}/${post}.md`);
+                if (!response.ok) {
+                    throw new Error('文章不存在');
+                }
+                
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                blogContent.innerHTML = html;
+            } catch (error) {
+                blogContent.innerHTML = `
+                    <div class="error">
+                        <h2>😕 文章加载失败</h2>
+                        <p>${error.message}</p>
+                        <a href="index.html" class="back-link">返回主页</a>
+                    </div>
+                `;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', loadBlogPost);
+    </script>
+</body>
+</html>

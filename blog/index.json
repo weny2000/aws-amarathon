@@ -1,0 +1,27 @@
+{
+  "2024": [
+    {
+      "id": "event-highlights-1",
+      "title": "2024 Amarathon 开幕式精彩瞬间",
+      "date": "2024-12-20",
+      "image": "images/gallery/2024-opening.jpg",
+      "summary": "2024年AWS技术马拉松在全球多个城市同步举行，吸引了来自世界各地的云计算爱好者和技术专家。"
+    },
+    {
+      "id": "event-highlights-2",
+      "title": "技术分享：Serverless架构实践",
+      "date": "2024-12-21",
+      "image": "images/gallery/2024-serverless.jpg",
+      "summary": "深入探讨了Serverless架构在企业级应用中的实践经验。"
+    }
+  ],
+  "2025": [
+    {
+      "id": "welcome",
+      "title": "欢迎参加 2025 Amarathon！",
+      "date": "2025-01-01",
+      "image": "images/gallery/2025-banner.jpg",
+      "summary": "2025年AWS技术马拉松即将启动！我们将带来更多精彩内容和技术分享。"
+    }
+  ]
+}

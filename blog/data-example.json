@@ -1,0 +1,20 @@
+{
+  "注释": "这是一个示例，展示如何在data/年份.json中配置gallery以链接到博客文章",
+  "gallery": [
+    {
+      "caption": "2024 Amarathon 开幕式精彩瞬间",
+      "image": "images/gallery/2024-opening.jpg",
+      "blogPost": "event-highlights-1"
+    },
+    {
+      "caption": "技术分享：Serverless架构实践",
+      "image": "images/gallery/2024-serverless.jpg",
+      "blogPost": "event-highlights-2"
+    },
+    {
+      "caption": "容器安全最佳实践",
+      "image": "images/gallery/2024-security.jpg",
+      "blogPost": "security-best-practices"
+    }
+  ]
+}

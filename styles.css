@@ -767,17 +767,24 @@ main {
     gap: 20px;
 }
 
+.gallery-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: all 0.3s;
+    background: #fff;
 }
 
 .gallery-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .gallery-image {
@@ -799,10 +806,26 @@ main {
 }
 
 .gallery-caption {
-    padding: 12px;
+    padding: 16px;
     background: #fff;
     font-size: 14px;
     color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read-more {
+    color: var(--aws-orange);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.gallery-item:hover .read-more {
+    text-decoration: underline;
 }
 
 /* 演讲议程 */
@@ -1037,7 +1060,7 @@ main {
     transition: all 0.3s;
     position: relative;
     box-shadow: 0 2px 12px rgba(99, 102, 241, 0.15);
-    margin-top: 32px;
+    margin-top: 40px;
 }
 
 .agenda-card:hover {
@@ -1047,21 +1070,21 @@ main {
 
 .agenda-badge {
     position: absolute;
-    top: -16px;
+    top: -18px;
     left: 24px;
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     color: white;
-    padding: 10px 24px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-size: 15px;
     font-weight: 700;
     z-index: 2;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
     letter-spacing: 0.3px;
 }
 
 .agenda-card-content {
-    padding: 28px;
+    padding: 32px 28px 28px 28px;
     background: #fafbff;
     border-radius: 14px;
     display: grid;

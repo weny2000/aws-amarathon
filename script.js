@@ -508,15 +508,23 @@ function renderGallery(gallery) {
     
     container.innerHTML = `
         <div class="gallery-grid">
-            ${gallery.map(item => `
-                <div class="gallery-item">
-                    ${item.image ? 
-                        `<img src="${item.image}" alt="${item.caption}" class="gallery-image">` :
-                        `<div class="gallery-placeholder">📷</div>`
-                    }
-                    <div class="gallery-caption">${item.caption}</div>
-                </div>
-            `).join('')}
+            ${gallery.map((item, index) => {
+                const blogLink = item.blogPost || `event-highlights-${index + 1}`;
+                return `
+                    <a href="blog.html?year=${currentYear}&post=${blogLink}" class="gallery-item-link">
+                        <div class="gallery-item">
+                            ${item.image ? 
+                                `<img src="${item.image}" alt="${item.caption}" class="gallery-image">` :
+                                `<div class="gallery-placeholder">📷</div>`
+                            }
+                            <div class="gallery-caption">
+                                ${item.caption}
+                                <span class="read-more">阅读更多 →</span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join('')}
         </div>
     `;
 }
