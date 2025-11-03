@@ -83,7 +83,7 @@
 │ Observability for Serverless           │
 │ Language: English                       │
 │                                         │
-│ Amazon Web Services provides...        │
+│ 亚马逊云科技 provides...        │
 │                                         │
 │ 👤 Yagr Xu                             │
 │    China                                │

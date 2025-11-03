@@ -6,7 +6,7 @@
   "introduction": {
     "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
     "subtitle": "\"Amarathon\" 源于 \"Amazon\" 和 \"Marathon\" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
-    "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the Amazon Web Services China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+    "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the 亚马逊云科技 China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
     "theme": "\"No Border\"",
     "themeDescription": "今年的活动主题为 \"No Border\"，无论你们都在哪，无论你们自哪里，\"亚跑拉松\"打破地域、国家和语言的限制，一起奔跑狂欢！"
   },
@@ -105,7 +105,7 @@
     "livestreamInteraction": {
       "title": "直播互动 Livestream Interaction",
       "description": "参与\"宝藏大挑战\"，注册并打卡，获得亚马逊云科技服务Credit及徽章奖励，赢取云端技能提升机会！",
-      "descriptionEn": "Participate in the \"Treasure Hunt Challenge\" - receive a flood of benefits and have a chance to win Amazon Web Services Credit (giveaway)! Specific gamer rules will be revealed soon!",
+      "descriptionEn": "Participate in the \"Treasure Hunt Challenge\" - receive a flood of benefits and have a chance to win 亚马逊云科技 Credit (giveaway)! Specific gamer rules will be revealed soon!",
       "details": "关注User Group公众号，在推送的文章中找到\"宝藏挑战\"入口并注册，然后在Twitter上关注并转发我们的最新Amarathon帖子。",
       "link": "https://x.io/track.php?v=8/2024/2025/22-23/aws-AWSUserGroupsSEA/GaGe5pGA",
       "twitter": "@CNUG_MoreHomo",

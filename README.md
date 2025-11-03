@@ -74,4 +74,4 @@ php -S localhost:8000
 
 ## 📄 许可证
 
-© 2025 Amazon Web Services, Inc. or its affiliates. All rights reserved.
+© 2025 亚马逊云科技, Inc. or its affiliates. All rights reserved.

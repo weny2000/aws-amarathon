@@ -199,7 +199,7 @@ background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 │                                         │
 │ Language: English [紫色标签]            │
 │                                         │
-│ Amazon Web Services provides...        │
+│ 亚马逊云科技 provides...        │
 │ [灰色正文]                              │
 │                                         │
 │ 👤 Yagr Xu                             │
