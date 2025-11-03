@@ -17,7 +17,7 @@ body {
     font-family: 'Amazon Ember', 'Helvetica Neue', Roboto, Arial, 'Microsoft YaHei', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background: #fff;
+    background: linear-gradient(to bottom, #f8f9ff 0%, #fafafa 100%);
 }
 
 .container {
@@ -160,7 +160,7 @@ body {
 /* 主内容区 */
 main {
     padding: 48px 24px;
-    background: #fff;
+    background: transparent;
 }
 
 .section {
@@ -168,15 +168,21 @@ main {
 }
 
 .section-header {
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--aws-light-gray);
+    margin-bottom: 32px;
+    padding: 24px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
 }
 
 .section-header h2 {
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--text-primary);
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
 }
 
 /* 活动介绍 */
@@ -249,11 +255,12 @@ main {
 }
 
 .live-schedule-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 8px;
-    padding: 32px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    border-radius: 16px;
+    padding: 36px;
     color: white;
-    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-icon {
@@ -321,19 +328,21 @@ main {
 
 .link-button {
     display: inline-block;
-    padding: 10px 24px;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #6366f1;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.2s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .link-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .twitter-handle {
@@ -1020,59 +1029,68 @@ main {
 
 .agenda-card {
     background: #fff;
-    border: 1px solid var(--aws-border);
-    border-radius: 8px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    border-image-slice: 1;
+    border-radius: 12px;
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s;
     position: relative;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
 }
 
 .agenda-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
 }
 
 .agenda-badge {
     position: absolute;
     top: 16px;
-    right: 16px;
-    background: var(--aws-orange);
+    left: 16px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 8px 16px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
     z-index: 1;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 .agenda-card-content {
-    padding: 24px;
+    padding: 28px;
+    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
 }
 
 .agenda-time-section {
     display: flex;
-    gap: 24px;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--aws-border);
+    gap: 32px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f0f0ff 0%, #faf5ff 100%);
+    border-radius: 8px;
+    border-left: 4px solid #6366f1;
 }
 
 .time-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .timezone-label {
-    font-size: 12px;
-    color: var(--text-secondary);
-    font-weight: 600;
+    font-size: 11px;
+    color: #6366f1;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .time-value {
     font-size: 16px;
-    color: var(--text-primary);
-    font-weight: 500;
+    color: #1e1b4b;
+    font-weight: 600;
 }
 
 .agenda-main-content {
@@ -1088,31 +1106,38 @@ main {
 }
 
 .session-title {
-    font-size: 20px;
-    color: var(--text-primary);
-    line-height: 1.4;
+    font-size: 22px;
+    color: #1e1b4b;
+    line-height: 1.5;
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1e1b4b 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .language-tag {
     display: flex;
     gap: 8px;
     align-items: center;
+    margin-top: 8px;
 }
 
 .lang-label {
-    font-size: 13px;
-    color: var(--text-secondary);
-    font-weight: 600;
+    font-size: 12px;
+    color: #6366f1;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .lang-value {
     font-size: 13px;
-    color: var(--text-primary);
-    background: var(--aws-light-gray);
-    padding: 4px 12px;
-    border-radius: 4px;
+    color: #1e1b4b;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    padding: 4px 14px;
+    border-radius: 12px;
+    font-weight: 600;
 }
 
 .session-summary {
@@ -1186,46 +1211,51 @@ main {
 }
 
 .social-link {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: var(--aws-light-gray);
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: var(--text-primary);
+    color: #6366f1;
     font-size: 14px;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    border: 2px solid transparent;
 }
 
 .social-link:hover {
-    background: var(--aws-orange);
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 /* 组委会样式 */
 .committee-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
     padding: 24px 0;
 }
 
 .committee-card {
     background: #fff;
-    border: 1px solid var(--aws-border);
-    border-radius: 8px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    border-image-slice: 1;
+    border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.1);
 }
 
 .committee-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(99, 102, 241, 0.25);
+    transform: translateY(-6px);
 }
 
 .committee-photo {
@@ -1237,13 +1267,14 @@ main {
 .committee-avatar {
     width: 100%;
     height: 250px;
-    background: linear-gradient(135deg, var(--aws-orange) 0%, #FF6B00 100%);
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .committee-info {
@@ -1255,22 +1286,31 @@ main {
 }
 
 .committee-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text-primary);
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e1b4b;
+    background: linear-gradient(135deg, #1e1b4b 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .committee-position,
 .committee-position-en {
     font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.4;
+    color: #64748b;
+    line-height: 1.5;
 }
 
 .committee-title {
     font-size: 14px;
-    color: var(--aws-orange);
-    font-weight: 500;
+    color: #6366f1;
+    font-weight: 600;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .committee-desc,
@@ -1293,28 +1333,33 @@ main {
     display: flex;
     gap: 12px;
     padding: 16px 20px;
-    border-top: 1px solid var(--aws-border);
-    background: var(--aws-light-gray);
+    border-top: 2px solid #e0e7ff;
+    background: linear-gradient(135deg, #fafafa 0%, #f8f9ff 100%);
 }
 
 .social-icon {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: all 0.3s;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+    border-radius: 50%;
+    border: 2px solid transparent;
 }
 
 .social-icon img {
-    width: 100%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.15) translateY(-2px);
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 /* 响应式设计 */
