@@ -1095,7 +1095,7 @@ main {
 .agenda-time-section {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     padding: 0;
     background: transparent;
     border-radius: 0;
@@ -1106,21 +1106,22 @@ main {
 .time-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .timezone-label {
-    font-size: 16px;
-    color: #6366f1;
-    font-weight: 700;
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .time-value {
-    font-size: 16px;
-    color: #1e1b4b;
+    font-size: 24px;
+    color: #6366f1;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .agenda-right-section {
