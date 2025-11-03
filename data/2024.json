@@ -85,7 +85,7 @@
   "announcement": {
     "title": "2024 Amarathon 技术马拉松圆满结束",
     "date": "2024年12月20日",
-    "description": "2024年度AWS技术马拉松活动已圆满结束！本次活动汇聚了来自全国各地的云计算爱好者和技术专家，共同探讨云原生、人工智能、大数据等前沿技术。活动期间举办了多场技术分享、动手实验和交流活动，参与者收获满满。感谢所有参与者、讲师和志愿者的支持！"
+    "description": "2024年度亚马逊云科技技术马拉松活动已圆满结束！本次活动汇聚了来自全国各地的云计算爱好者和技术专家，共同探讨云原生、人工智能、大数据等前沿技术。活动期间举办了多场技术分享、动手实验和交流活动，参与者收获满满。感谢所有参与者、讲师和志愿者的支持！"
   },
   "liveSchedule": {
     "eventDates": [
@@ -104,7 +104,7 @@
     ],
     "livestreamInteraction": {
       "title": "直播互动 Livestream Interaction",
-      "description": "参与\"宝藏大挑战\"，注册并打卡，获得AWS服务Credit及徽章奖励，赢取云端技能提升机会！",
+      "description": "参与\"宝藏大挑战\"，注册并打卡，获得亚马逊云科技服务Credit及徽章奖励，赢取云端技能提升机会！",
       "descriptionEn": "Participate in the \"Treasure Hunt Challenge\" - receive a flood of benefits and have a chance to win Amazon Web Services Credit (giveaway)! Specific gamer rules will be revealed soon!",
       "details": "关注User Group公众号，在推送的文章中找到\"宝藏挑战\"入口并注册，然后在Twitter上关注并转发我们的最新Amarathon帖子。",
       "link": "https://x.io/track.php?v=8/2024/2025/22-23/aws-AWSUserGroupsSEA/GaGe5pGA",
@@ -192,7 +192,7 @@
       "time": "10:30 - 11:30",
       "title": "Serverless架构实战",
       "speaker": "李明 - AWS技术专家",
-      "description": "介绍无服务器架构的设计理念和实际应用案例，演示如何使用AWS Lambda、API Gateway等服务构建高可用应用。"
+      "description": "介绍无服务器架构的设计理念和实际应用案例，演示如何使用亚马逊云科技 Lambda、API Gateway等服务构建高可用应用。"
     },
     {
       "time": "11:30 - 12:30",
@@ -204,7 +204,7 @@
       "time": "12:30 - 13:30",
       "title": "AI与机器学习在云端的应用",
       "speaker": "王芳 - AWS AI/ML专家",
-      "description": "分享AWS机器学习服务的应用场景，演示如何使用SageMaker构建、训练和部署机器学习模型。"
+      "description": "分享亚马逊云科技机器学习服务的应用场景，演示如何使用SageMaker构建、训练和部署机器学习模型。"
     },
     {
       "time": "13:30 - 14:30",
@@ -222,7 +222,7 @@
       "time": "15:30 - 16:30",
       "title": "动手实验：构建云原生应用",
       "speaker": "AWS技术团队",
-      "description": "参与者动手实践，使用AWS服务构建一个完整的云原生应用，包括容器化、CI/CD、监控等环节。"
+      "description": "参与者动手实践，使用亚马逊云科技服务构建一个完整的云原生应用，包括容器化、CI/CD、监控等环节。"
     },
     {
       "time": "16:30 - 17:00",
