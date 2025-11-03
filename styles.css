@@ -1009,3 +1009,342 @@ main {
         padding-left: 30px;
     }
 }
+
+/* 演讲议程样式 */
+.agenda-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0;
+}
+
+.agenda-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    position: relative;
+}
+
+.agenda-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--aws-orange);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.agenda-card-content {
+    padding: 24px;
+}
+
+.agenda-time-section {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--aws-border);
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timezone-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.time-value {
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.agenda-main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+}
+
+.agenda-desc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.session-title {
+    font-size: 20px;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 600;
+}
+
+.language-tag {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.lang-value {
+    font-size: 13px;
+    color: var(--text-primary);
+    background: var(--aws-light-gray);
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.session-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.speaker-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.speaker-info {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.speaker-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--aws-border);
+}
+
+.speaker-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--aws-orange);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.speaker-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.speaker-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.speaker-country {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.speaker-title {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.speaker-social {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--aws-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.social-link:hover {
+    background: var(--aws-orange);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 组委会样式 */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 24px 0;
+}
+
+.committee-card {
+    background: #fff;
+    border: 1px solid var(--aws-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.committee-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.committee-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.committee-avatar {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--aws-orange) 0%, #FF6B00 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.committee-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.committee-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.committee-position,
+.committee-position-en {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.committee-title {
+    font-size: 14px;
+    color: var(--aws-orange);
+    font-weight: 500;
+}
+
+.committee-desc,
+.committee-desc-en,
+.committee-bio {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.committee-job,
+.committee-job-en {
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.committee-social {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--aws-border);
+    background: var(--aws-light-gray);
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .agenda-main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .agenda-time-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .agenda-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+    
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .speaker-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .speaker-details {
+        align-items: center;
+    }
+}

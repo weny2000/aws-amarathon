@@ -531,13 +531,60 @@ function renderAgenda(agenda) {
     }
     
     container.innerHTML = `
-        <div class="agenda-timeline">
+        <div class="agenda-cards">
             ${agenda.map(item => `
-                <div class="agenda-item">
-                    <div class="agenda-time">${item.time}</div>
-                    <div class="agenda-title">${item.title}</div>
-                    <div class="agenda-speaker">👤 ${item.speaker}</div>
-                    <div class="agenda-description">${item.description}</div>
+                <div class="agenda-card">
+                    <div class="agenda-badge">${item.sessionLevel || 'Level 200'}</div>
+                    <div class="agenda-card-content">
+                        <div class="agenda-time-section">
+                            <div class="time-item">
+                                <span class="timezone-label">UTC</span>
+                                <span class="time-value">${item.sessionTimeUTC || item.time}</span>
+                            </div>
+                            ${item.sessionTimeBeijing ? `
+                                <div class="time-item">
+                                    <span class="timezone-label">Beijing</span>
+                                    <span class="time-value">${item.sessionTimeBeijing}</span>
+                                </div>
+                            ` : ''}
+                        </div>
+                        <div class="agenda-main-content">
+                            <div class="agenda-desc-section">
+                                <h3 class="session-title">${item.sessionTitle || item.title}</h3>
+                                ${item.language ? `
+                                    <div class="language-tag">
+                                        <span class="lang-label">Language:</span>
+                                        <span class="lang-value">${item.language}</span>
+                                    </div>
+                                ` : ''}
+                                <p class="session-summary">${item.sessionSummary || item.description}</p>
+                            </div>
+                            <div class="speaker-section">
+                                <div class="speaker-info">
+                                    ${item.photo ? `
+                                        <img src="${item.photo}" alt="${item.firstName} ${item.lastName}" class="speaker-photo">
+                                    ` : `
+                                        <div class="speaker-avatar">${(item.firstName || item.speaker || 'S').charAt(0)}</div>
+                                    `}
+                                    <div class="speaker-details">
+                                        <div class="speaker-name">${item.firstName && item.lastName ? `${item.firstName} ${item.lastName}` : item.speaker}</div>
+                                        ${item.country ? `<div class="speaker-country">${item.country}</div>` : ''}
+                                        ${item.title ? `<div class="speaker-title">${item.title}</div>` : ''}
+                                    </div>
+                                </div>
+                                ${(item.twitter || item.facebook || item.instagram || item.gitHub || item.linkedIn || item.other) ? `
+                                    <div class="speaker-social">
+                                        ${item.twitter ? `<a href="${item.twitter}" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter/X">𝕏</a>` : ''}
+                                        ${item.facebook ? `<a href="${item.facebook}" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">f</a>` : ''}
+                                        ${item.instagram ? `<a href="${item.instagram}" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">📷</a>` : ''}
+                                        ${item.gitHub ? `<a href="${item.gitHub}" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">🐙</a>` : ''}
+                                        ${item.linkedIn ? `<a href="${item.linkedIn}" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">in</a>` : ''}
+                                        ${item.other ? `<a href="${item.other}" target="_blank" rel="noopener noreferrer" class="social-link" title="Website">🌐</a>` : ''}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             `).join('')}
         </div>
@@ -557,10 +604,31 @@ function renderCommittee(committee) {
         <div class="committee-grid">
             ${committee.map(member => `
                 <div class="committee-card">
-                    <div class="committee-avatar">${member.name.charAt(0)}</div>
-                    <div class="committee-name">${member.name}</div>
-                    <div class="committee-title">${member.title}</div>
-                    <div class="committee-bio">${member.bio}</div>
+                    ${member.poster || member.photo ? `
+                        <img src="${member.poster || member.photo}" alt="${member.name}" class="committee-photo">
+                    ` : `
+                        <div class="committee-avatar">${member.name.charAt(0)}</div>
+                    `}
+                    <div class="committee-info">
+                        <div class="committee-name">${member.name}</div>
+                        ${member.position ? `<div class="committee-position">${member.position}</div>` : ''}
+                        ${member.positionEn ? `<div class="committee-position-en">${member.positionEn}</div>` : ''}
+                        ${member.title ? `<div class="committee-title">${member.title}</div>` : ''}
+                        ${member.desc ? `<div class="committee-desc">${member.desc}</div>` : ''}
+                        ${member.descEn ? `<div class="committee-desc-en">${member.descEn}</div>` : ''}
+                        ${member.bio ? `<div class="committee-bio">${member.bio}</div>` : ''}
+                        ${member.job ? `<div class="committee-job">${member.job}</div>` : ''}
+                        ${member.jobEn ? `<div class="committee-job-en">${member.jobEn}</div>` : ''}
+                    </div>
+                    ${member.share && member.share.length > 0 ? `
+                        <div class="committee-social">
+                            ${member.share.map(social => `
+                                <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                    ${social.src ? `<img src="${social.src}" alt="social">` : '🔗'}
+                                </a>
+                            `).join('')}
+                        </div>
+                    ` : ''}
                 </div>
             `).join('')}
         </div>

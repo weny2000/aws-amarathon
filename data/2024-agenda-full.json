@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "firstName": "Yagr",
+    "lastName": "Xu",
+    "sessionTitle": "Observability for Serverless\n无服务器架构的可观测性",
+    "sessionSummary": "Amazon Web Services provides comprehensive observability for serverless through logs in CloudWatch Logs, metrics and insights in CloudWatch, and distributed tracing with X-Ray. Additionally, Amazon Distro for OpenTelemetry (ADOT) enables standardized telemetry data collection, while Amazon Lambda Power Tools simplifies logging, metrics, and tracing for Lambda functions.",
+    "country": "China",
+    "language": "English",
+    "title": "Amazon Web Services Senior Solutions Architect",
+    "twitter": null,
+    "facebook": "https://www.facebook.com/profile.php?id=1283610736",
+    "instagram": null,
+    "gitHub": "https://github.com/yagrxu",
+    "linkedIn": "https://www.linkedin.com/in/yagrxu",
+    "other": null,
+    "sessionLevel": "Level 300 Advanced",
+    "sessionTimeUTC": "4:03 AM",
+    "sessionTimeBeijing": "12:03 PM",
+    "photo": ""
+  },
+  {
+    "id": 2,
+    "firstName": "Sanchit",
+    "lastName": "Jain",
+    "sessionTitle": "Zero ETL on Amazon Web Services - Accelerating Insights, Eliminating Complexity \n加速洞察，消除复杂度",
+    "sessionSummary": "ZeroETL represents a paradigm shift in data processing, eradicating the traditional Extract, Transform, Load(ETL) complexities. Join us to explore how ZeroETL on Amazon Web Services streamlines data pipelines, reduces latency, and accelerates insights generation.",
+    "country": "India",
+    "language": "English",
+    "title": "Amazon Web Services Hero/D&A Practice Lead",
+    "twitter": "https://x.com/sanchitdilip",
+    "facebook": null,
+    "instagram": null,
+    "gitHub": "https://github.com/sanchitdilipjain",
+    "linkedIn": "https://www.linkedin.com/in/sanchitdilipjain/",
+    "other": "https://blog.getsetbuild.cloud/",
+    "sessionLevel": "Level 200 Intermediate",
+    "sessionTimeUTC": "4:20 AM",
+    "sessionTimeBeijing": "12:20 PM",
+    "photo": ""
+  }
+]

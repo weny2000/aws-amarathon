@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演讲议程测试 - Amarathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-header {
+            background: var(--aws-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>演讲议程新样式测试</h1>
+            <p>这是基于原始Vue代码更新后的演讲议程展示效果</p>
+        </div>
+
+        <section class="section agenda-section">
+            <div class="section-header">
+                <h2>演讲议程 Agenda</h2>
+            </div>
+            <div id="agendaContent"></div>
+        </section>
+
+        <section class="section committee-section" style="margin-top: 40px;">
+            <div class="section-header">
+                <h2>Amarathon组委会</h2>
+            </div>
+            <div id="committeeContent"></div>
+        </section>
+    </div>
+
+    <script>
+        // 测试数据
+        const testAgenda = [
+            {
+                "id": 1,
+                "firstName": "Yagr",
+                "lastName": "Xu",
+                "sessionTitle": "Observability for Serverless\n无服务器架构的可观测性",
+                "sessionSummary": "Amazon Web Services provides comprehensive observability for serverless through logs in CloudWatch Logs, metrics and insights in CloudWatch, and distributed tracing with X-Ray. Additionally, Amazon Distro for OpenTelemetry (ADOT) enables standardized telemetry data collection.",
+                "country": "China",
+                "language": "English",
+                "title": "Amazon Web Services Senior Solutions Architect",
+                "sessionLevel": "Level 300 Advanced",
+                "sessionTimeUTC": "4:03 AM",
+                "sessionTimeBeijing": "12:03 PM",
+                "linkedIn": "https://www.linkedin.com/in/yagrxu",
+                "gitHub": "https://github.com/yagrxu"
+            },
+            {
+                "id": 2,
+                "firstName": "Sanchit",
+                "lastName": "Jain",
+                "sessionTitle": "Zero ETL on Amazon Web Services\n加速洞察，消除复杂度",
+                "sessionSummary": "ZeroETL represents a paradigm shift in data processing, eradicating the traditional Extract, Transform, Load(ETL) complexities. Join us to explore how ZeroETL streamlines data pipelines.",
+                "country": "India",
+                "language": "English",
+                "title": "Amazon Web Services Hero/D&A Practice Lead",
+                "sessionLevel": "Level 200 Intermediate",
+                "sessionTimeUTC": "4:20 AM",
+                "sessionTimeBeijing": "12:20 PM",
+                "twitter": "https://x.com/sanchitdilip",
+                "linkedIn": "https://www.linkedin.com/in/sanchitdilipjain/"
+            }
+        ];
+
+        const testCommittee = [
+            {
+                "name": "李少奕 Shaoyi Li",
+                "position": "CN-UG Committee Member, Co-founder of Amarathon",
+                "title": "Amazon Community Hero",
+                "job": "项目计划、技术负责人",
+                "jobEn": "Lead for event technical solutions",
+                "desc": "负责活动策划和管理，推动Amarathon活动走向全球",
+                "share": [
+                    {
+                        "url": "https://www.linkedin.com/in/shaoyi-li-096835140/"
+                    }
+                ]
+            },
+            {
+                "name": "许业宝 Yebao Xu",
+                "position": "UGL Shanghai Member",
+                "positionEn": "Amazon GCR Advocate Blogger",
+                "job": "讲师招募、活动支持、直播支持",
+                "jobEn": "Speaker recruitment, event and livestream support",
+                "desc": "亚马逊云科技 UGL 成员及技领云博主，承办社区活动，提供技术支持"
+            }
+        ];
+
+        // 渲染函数（从script.js复制）
+        function renderAgenda(agenda) {
+            const container = document.getElementById('agendaContent');
+            
+            if (!agenda || agenda.length === 0) {
+                container.innerHTML = '<div class="empty-state">暂无演讲议程</div>';
+                return;
+            }
+            
+            container.innerHTML = `
+                <div class="agenda-cards">
+                    ${agenda.map(item => `
+                        <div class="agenda-card">
+                            <div class="agenda-badge">${item.sessionLevel || 'Level 200'}</div>
+                            <div class="agenda-card-content">
+                                <div class="agenda-time-section">
+                                    <div class="time-item">
+                                        <span class="timezone-label">UTC</span>
+                                        <span class="time-value">${item.sessionTimeUTC || item.time}</span>
+                                    </div>
+                                    ${item.sessionTimeBeijing ? `
+                                        <div class="time-item">
+                                            <span class="timezone-label">Beijing</span>
+                                            <span class="time-value">${item.sessionTimeBeijing}</span>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                                <div class="agenda-main-content">
+                                    <div class="agenda-desc-section">
+                                        <h3 class="session-title">${item.sessionTitle || item.title}</h3>
+                                        ${item.language ? `
+                                            <div class="language-tag">
+                                                <span class="lang-label">Language:</span>
+                                                <span class="lang-value">${item.language}</span>
+                                            </div>
+                                        ` : ''}
+                                        <p class="session-summary">${item.sessionSummary || item.description}</p>
+                                    </div>
+                                    <div class="speaker-section">
+                                        <div class="speaker-info">
+                                            ${item.photo ? `
+                                                <img src="${item.photo}" alt="${item.firstName} ${item.lastName}" class="speaker-photo">
+                                            ` : `
+                                                <div class="speaker-avatar">${(item.firstName || item.speaker || 'S').charAt(0)}</div>
+                                            `}
+                                            <div class="speaker-details">
+                                                <div class="speaker-name">${item.firstName && item.lastName ? `${item.firstName} ${item.lastName}` : item.speaker}</div>
+                                                ${item.country ? `<div class="speaker-country">${item.country}</div>` : ''}
+                                                ${item.title ? `<div class="speaker-title">${item.title}</div>` : ''}
+                                            </div>
+                                        </div>
+                                        ${(item.twitter || item.facebook || item.instagram || item.gitHub || item.linkedIn || item.other) ? `
+                                            <div class="speaker-social">
+                                                ${item.twitter ? `<a href="${item.twitter}" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter/X">𝕏</a>` : ''}
+                                                ${item.facebook ? `<a href="${item.facebook}" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">f</a>` : ''}
+                                                ${item.instagram ? `<a href="${item.instagram}" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">📷</a>` : ''}
+                                                ${item.gitHub ? `<a href="${item.gitHub}" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">🐙</a>` : ''}
+                                                ${item.linkedIn ? `<a href="${item.linkedIn}" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">in</a>` : ''}
+                                                ${item.other ? `<a href="${item.other}" target="_blank" rel="noopener noreferrer" class="social-link" title="Website">🌐</a>` : ''}
+                                            </div>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderCommittee(committee) {
+            const container = document.getElementById('committeeContent');
+            
+            if (!committee || committee.length === 0) {
+                container.innerHTML = '<div class="empty-state">暂无组委会信息</div>';
+                return;
+            }
+            
+            container.innerHTML = `
+                <div class="committee-grid">
+                    ${committee.map(member => `
+                        <div class="committee-card">
+                            ${member.poster || member.photo ? `
+                                <img src="${member.poster || member.photo}" alt="${member.name}" class="committee-photo">
+                            ` : `
+                                <div class="committee-avatar">${member.name.charAt(0)}</div>
+                            `}
+                            <div class="committee-info">
+                                <div class="committee-name">${member.name}</div>
+                                ${member.position ? `<div class="committee-position">${member.position}</div>` : ''}
+                                ${member.positionEn ? `<div class="committee-position-en">${member.positionEn}</div>` : ''}
+                                ${member.title ? `<div class="committee-title">${member.title}</div>` : ''}
+                                ${member.desc ? `<div class="committee-desc">${member.desc}</div>` : ''}
+                                ${member.descEn ? `<div class="committee-desc-en">${member.descEn}</div>` : ''}
+                                ${member.bio ? `<div class="committee-bio">${member.bio}</div>` : ''}
+                                ${member.job ? `<div class="committee-job">${member.job}</div>` : ''}
+                                ${member.jobEn ? `<div class="committee-job-en">${member.jobEn}</div>` : ''}
+                            </div>
+                            ${member.share && member.share.length > 0 ? `
+                                <div class="committee-social">
+                                    ${member.share.map(social => `
+                                        <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                            ${social.src ? `<img src="${social.src}" alt="social">` : '🔗'}
+                                        </a>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // 页面加载后渲染
+        document.addEventListener('DOMContentLoaded', function() {
+            renderAgenda(testAgenda);
+            renderCommittee(testCommittee);
+        });
+    </script>
+</body>
+</html>
