@@ -1107,14 +1107,10 @@ main {
 
 .session-title {
     font-size: 22px;
-    color: #1e1b4b;
+    color: #1a1a1a;
     line-height: 1.5;
     margin: 0;
     font-weight: 700;
-    background: linear-gradient(135deg, #1e1b4b 0%, #6366f1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .language-tag {
@@ -1288,11 +1284,7 @@ main {
 .committee-name {
     font-size: 19px;
     font-weight: 700;
-    color: #1e1b4b;
-    background: linear-gradient(135deg, #1e1b4b 0%, #6366f1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #1a1a1a;
 }
 
 .committee-position,
