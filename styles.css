@@ -63,7 +63,10 @@ img.aws-logo {
 
 /* Hero 区域 */
 .hero {
-    background: linear-gradient(135deg, var(--aws-dark) 0%, #37475A 100%);
+    background: linear-gradient(135deg, rgba(35, 47, 62, 0.85) 0%, rgba(55, 71, 90, 0.85) 100%), url('images/backgroup.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 60px 0;
     text-align: center;
