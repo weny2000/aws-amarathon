@@ -117,38 +117,6 @@
       "descriptionEn": "Each speaker gives their presentation in their local language, and the live stream message will include real-time translation services, providing both Chinese and English subtitles for all presentations."
     }
   },
-  "userGroups": [
-    {
-      "name": "北京UG",
-      "icon": "🏛️",
-      "count": 156
-    },
-    {
-      "name": "上海UG",
-      "icon": "🌆",
-      "count": 142
-    },
-    {
-      "name": "深圳UG",
-      "icon": "🌃",
-      "count": 128
-    },
-    {
-      "name": "杭州UG",
-      "icon": "🏞️",
-      "count": 98
-    },
-    {
-      "name": "成都UG",
-      "icon": "🐼",
-      "count": 87
-    },
-    {
-      "name": "广州UG",
-      "icon": "🌺",
-      "count": 76
-    }
-  ],
   "gallery": [
     {
       "image": "",
