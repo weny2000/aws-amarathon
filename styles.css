@@ -45,6 +45,12 @@ body {
     font-weight: bold;
 }
 
+img.aws-logo {
+    width: 135px;
+    height: 42px;
+    object-fit: contain;
+}
+
 .divider {
     color: #fff;
     opacity: 0.5;
