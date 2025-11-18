@@ -81,6 +81,241 @@
       "sessionTimeUTC": "12:40 AM",
       "sessionTimeBeijing": "12:40 PM"
     }
+  ],
+  "committee": [
+    {
+      "name": "李少奕 Shaoyi Li",
+      "position": "CN-UG Committee Member, Co-founder of Amarathon Geek Talk, Amazon Community Hero, Amazon GCR Advocate Blogger",
+      "job": "项目计划、技术负责人",
+      "jobEn": "Lead for event technical solutions. Responsible for event planning and management. Promote the Amarathon event to the global to boost its international exposure.",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/shaoyi-li-096835140/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://blog.csdn.net/m0_66628975?spm=1000.2115.3001.5343",
+          "src": "images/social-icons/csdn.png"
+        },
+        {
+          "url": "https://s12d.com/xiaolige",
+          "src": "images/social-icons/xiaohongshu.png"
+        },
+        {
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
+          "src": "images/social-icons/douyin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/lishaoyi.png"
+    },
+    {
+      "name": "许业宝 Yebao Xu",
+      "position": "UGL Shanghai Member, Amazon GCR Advocate Blogger",
+      "desc": "亚马逊云科技 UGL 成员及技领云博主，承办社区活动，提供技术支持，获多项亚马逊云科技认证，发表技术博客，分享经验，专注云原生，推广云产品服务。",
+      "descEn": "An Amazon UGL member and technical blogger, organizing community events and providing technical support. Holds multiple Amazon certifications, publishes technical blogs, shares expertise, and focuses on cloud-native solutions, promoting cloud products and services.",
+      "job": "讲师招募、活动支持、直播支持",
+      "jobEn": "Responsible for speaker recruitment, event and livestream support",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/yebao-xu-aa9283201/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://xybdiy.blog.csdn.net/",
+          "src": "images/social-icons/csdn.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/xuyebao.png"
+    },
+    {
+      "name": "赵安娜 Anna Zhao",
+      "position": "UGL 北京成员",
+      "positionEn": "UGL Beijing Member",
+      "desc": "亚马逊云科技UGL成员，主要负责组织策划UG社区的各类活动，包括Community Day、UG Meetup等，活动的执行，品牌形象策划到视觉设计、文案撰写及活动推广等。提升社区的影响力和认知度，吸引更多技术爱好者加入UG社区。",
+      "descEn": "An Amazon UGL member primarily responsible for organizing and planning various UG community events, including Community Day and UG Meetups. Duties include event execution, brand image planning, visual design, copywriting, and event promotion. Enhances the community's influence and visibility, attracting more tech enthusiasts to join the UG community.",
+      "job": "项目策划、内容策划、活动宣发、主持人",
+      "jobEn": "Project planning, Content planning, Event promotion, Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/anna-zhao-a83690334",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/zhaoanna.png"
+    },
+    {
+      "name": "张润迪 Rundi Zhang",
+      "position": "UGL 广州成员",
+      "positionEn": "UGL Guangzhou Member",
+      "desc": "作为亚马逊云科技 UGL 成员之一，主要负责策划并执行 Community Day 和 Meetup 等活动，致力于推动技术交流和知识分享，激发社区活力，让参与者体验广州的文化魅力。",
+      "descEn": "As an Amazon UGL member, primarily responsible for planning and executing events such as Community Day and Meetups. Committed to promoting technical exchange and knowledge sharing, inspiring community engagement, and allowing participants to experience the cultural charm of Guangzhou.",
+      "job": "合作伙伴招募、活动礼品策划",
+      "jobEn": "Managed partner and sponsor recruitment, and event gift planning",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/rundi-zhang-030060305",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/zhangrundi.png"
+    },
+    {
+      "name": "马萍 Ping Ma",
+      "position": "UGL 上海成员",
+      "positionEn": "UGL Shanghai Member",
+      "desc": "作为亚马逊云科技 UGL 成员之一，主要负责社区会员管理，策划并执行上海地区的交流分享活动，致力于推动技术交流和知识分享，提升社区的影响力和认知度，吸引更多技术爱好者加入 UG 社区。",
+      "descEn": "As an Amazon UGL member, primarily responsible for community member management and planning and executing networking and sharing events in the Shanghai area. Committed to promoting technical exchange and knowledge sharing, enhancing the community's influence and visibility, and attracting more tech enthusiasts to join the UG community.",
+      "job": "创意策划",
+      "jobEn": "Creative Strategy",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/%E8%90%8D-%E9%A9%AC-2b8038a5",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/maping.png"
+    },
+    {
+      "name": "Kenny Chan",
+      "position": "Amazon Community Builder （Machine Learning, Hong Kong）",
+      "desc": "亚马逊云科技 Community Builder、金融科技、深度学习、宏观交易。负责出海企业、GenAI、金融服务解决方案。在社区中推动了 \"Think Big, Start Small, Learn Fast\" 的理念，另\"前沿资本\"合伙人提供创投和宏观资产配置解决方案。曾获得多个创投比赛奖项，包括 Open Data Hackathon 2023 (Public Stream Champion)，Hong Kong/Shanghai Co-operation Open Data Challenge 2024 (Smart Environment Award & Smart Economy Award)等。",
+      "descEn": "Amazon Community Builder specializing in FinTech, deep learning, and macro trading. Responsible for overseas enterprise, GenAI, and financial services solutions. Promotes the \"Think Big, Start Small, Learn Fast\" philosophy within the community and is a partner at \"Frontier Capital,\" providing venture and macro asset allocation solutions. Recipient of multiple venture competition awards, including the Open Data Hackathon 2023 (Public Stream Champion) and the Hong Kong/Shanghai Co-operation Open Data Challenge 2024 (Smart Environment Award & Smart Economy Award), among others.",
+      "job": "出海宣发",
+      "jobEn": "Responsible for global media publications and media PR promotion",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/kenny-chen-a560a8241/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://dev.to/kennc",
+          "src": "images/social-icons/devto.png"
+        },
+        {
+          "url": "https://kennychen.frontiertechcap.com/",
+          "src": "images/social-icons/website.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/kennychan.png"
+    },
+    {
+      "name": "李小飞 XiaoFei Li",
+      "position": "UG Ambassador成员，Amazon GCR Advocate Blogger",
+      "positionEn": "UG Ambassador Member, Amazon GCR Advocate Blogger",
+      "desc": "亚马逊云科技 UG Ambassador成员及技领云博主。2023年与2024年亚马逊云科技全认证工程师，并在2024年上海峰会中荣获金夹克奖项。专注于云迁移与AI技术解决方案，积极发表技术博客、分享经验，策划并执行社区活动，提升社区影响力与认知度，吸引更多技术爱好者加入UG社区。",
+      "descEn": "An Amazon UG Ambassador and technology blogger specializing in cloud migration and AI solutions, recognized as a 2023 and 2024 Amazon All Certifications Engineer and an award winner at the 2024 Shanghai Summit Golden Jacket. Actively publishes technical blogs and shares insights, contributing to the planning and execution of community events to enhance community influence and awareness, attracting more tech enthusiasts to join the UG community.",
+      "job": "内容策划、活动支持、活动宣发",
+      "jobEn": "Content planning, Event support and promotion",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/xiaofei-li-3a78289a/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://blog.csdn.net/rralucard123",
+          "src": "images/social-icons/csdn.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/lixiaofei.png"
+    }
+  ],
+  "judges": [
+    {
+      "name": "李钊 Li Zhao",
+      "position": "亚马逊云科技Brand & Developer MKT Leader",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [],
+      "poster": "images/2024/amarathon12/lizhao.png"
+    },
+    {
+      "name": "郑予彬 Betty",
+      "position": "Senior Developer Advocate 资深开发者布道师",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/betty-zheng-5420357a/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/betty.png"
+    },
+    {
+      "name": "潘娟 Juan Pan",
+      "position": "Amazon Data hero",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/panjuan",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://twitter.com/tristaZero",
+          "src": "images/social-icons/twitter.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/panjuan.png"
+    }
+  ],
+  "advisers": [
+    {
+      "name": "Shun Yoshie",
+      "desc": "Amazon Security Hero (ex-Amazon Community Hero). Originator of JAWS PANKRATION and executive committee chair of JAWS PANKRATION 2021 and 2024. In Japan, in addition to managing Security-JAWS, he has also managed several Amazon community events.",
+      "descEn": "Currently working as an IT security consultant. My favorite Amazon service is Amazon Security Hub & Amazon WAF. My favorite technology is CNAPP.",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://x.com/typhon666_death",
+          "src": "images/social-icons/twitter.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/shunyoshie.png"
+    },
+    {
+      "name": "吕凌曦 Smile",
+      "desc": "Amazon 开发者体验（DevEx）团队社区项目经理，负责大中华区 Hero 社区项目和 Community Builder 社区项目，致力于构建全球中文开发者社区。",
+      "descEn": "Amazon Developer Experience advocacy Program Manager，supporting Hero Program, Community Program in Greater China region and global Chinese developer community.",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/smile-lingxi-lv-239b6335",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/smile.png"
+    },
+    {
+      "name": "刘洋琳",
+      "desc": "Amazon Community Manager（Builder Marketing Manager）亚马逊中国User Group开发者社区负责人，也是亚麻拉松（Amarathon）发起人和创始人之一。",
+      "descEn": "Amazon Builder Marketing Manager，The community manager of the Amazon China User Group, and one of the initiators and founders of the Amarathon",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/yanglin-liu-5aba5299/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/liuyanglin.png"
+    },
+    {
+      "name": "王萃 Tracy Wang",
+      "desc": "亚马逊云科技学术倡导团队学生社区项目经理，负责全球学生社区- Amazon Cloud Clubs 项目设计和运营。",
+      "descEn": "Amazon Academic Advocacy Team Student Community Program Manager, responsible for global student community-Amazon Cloud Clubs program design and operation.",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/tracywangcc/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://s12d.com/xiaohongshu",
+          "src": "images/social-icons/xiaohongshu.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/tracywang.png"
+    }
   ]
 }
 
