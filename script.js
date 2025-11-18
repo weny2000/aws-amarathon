@@ -627,59 +627,104 @@ function renderCommittee(data) {
     
     if (!container) return;
     
-    // 合并所有成员：committee, judges, advisers
-    let allMembers = [];
-    
-    if (data.committee && Array.isArray(data.committee)) {
-        allMembers = allMembers.concat(data.committee.map(m => ({...m, role: 'committee'})));
-    }
-    
-    if (data.judges && Array.isArray(data.judges)) {
-        allMembers = allMembers.concat(data.judges.map(m => ({...m, role: 'judge'})));
-    }
-    
-    if (data.advisers && Array.isArray(data.advisers)) {
-        allMembers = allMembers.concat(data.advisers.map(m => ({...m, role: 'adviser'})));
-    }
-    
-    if (allMembers.length === 0) {
-        container.innerHTML = '<div class="empty-state">暂无组委会信息</div>';
-        return;
-    }
-    
-    container.innerHTML = `
-        <div class="committee-grid">
-            ${allMembers.map(member => `
-                <div class="committee-card">
-                    ${member.poster || member.photo ? `
-                        <img src="${member.poster || member.photo}" alt="${member.name}" class="committee-photo">
-                    ` : `
-                        <div class="committee-avatar">${member.name.charAt(0)}</div>
-                    `}
-                    <div class="committee-info">
-                        <div class="committee-name">${member.name}</div>
-                        ${member.position ? `<div class="committee-position">${member.position}</div>` : ''}
-                        ${member.positionEn ? `<div class="committee-position-en">${member.positionEn}</div>` : ''}
-                        ${member.title ? `<div class="committee-title">${member.title}</div>` : ''}
-                        ${member.desc ? `<div class="committee-desc">${member.desc}</div>` : ''}
-                        ${member.descEn ? `<div class="committee-desc-en">${member.descEn}</div>` : ''}
-                        ${member.bio ? `<div class="committee-bio">${member.bio}</div>` : ''}
-                        ${member.job ? `<div class="committee-job">${member.job}</div>` : ''}
-                        ${member.jobEn ? `<div class="committee-job-en">${member.jobEn}</div>` : ''}
-                    </div>
-                    ${member.share && member.share.length > 0 ? `
-                        <div class="committee-social">
-                            ${member.share.map(social => `
-                                <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    ${social.src ? `<img src="${social.src}" alt="social" onerror="this.style.display='none';this.parentElement.innerHTML='🔗'">` : '🔗'}
-                                </a>
-                            `).join('')}
-                        </div>
-                    ` : ''}
+    // 渲染成员卡片的辅助函数
+    const renderMemberCard = (member) => `
+        <div class="committee-card">
+            ${member.poster || member.photo ? `
+                <img src="${member.poster || member.photo}" alt="${member.name}" class="committee-photo">
+            ` : `
+                <div class="committee-avatar">${member.name.charAt(0)}</div>
+            `}
+            <div class="committee-info">
+                <div class="committee-name">${member.name}</div>
+                ${member.position ? `<div class="committee-position">${member.position}</div>` : ''}
+                ${member.positionEn ? `<div class="committee-position-en">${member.positionEn}</div>` : ''}
+                ${member.title ? `<div class="committee-title">${member.title}</div>` : ''}
+                ${member.desc ? `<div class="committee-desc">${member.desc}</div>` : ''}
+                ${member.descEn ? `<div class="committee-desc-en">${member.descEn}</div>` : ''}
+                ${member.bio ? `<div class="committee-bio">${member.bio}</div>` : ''}
+                ${member.job ? `<div class="committee-job">${member.job}</div>` : ''}
+                ${member.jobEn ? `<div class="committee-job-en">${member.jobEn}</div>` : ''}
+            </div>
+            ${member.share && member.share.length > 0 ? `
+                <div class="committee-social">
+                    ${member.share.map(social => `
+                        <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            ${social.src ? `<img src="${social.src}" alt="social" onerror="this.style.display='none';this.parentElement.innerHTML='🔗'">` : '🔗'}
+                        </a>
+                    `).join('')}
                 </div>
-            `).join('')}
+            ` : ''}
         </div>
     `;
+    
+    const hasCommittee = data.committee && Array.isArray(data.committee) && data.committee.length > 0;
+    const hasJudges = data.judges && Array.isArray(data.judges) && data.judges.length > 0;
+    const hasAdvisers = data.advisers && Array.isArray(data.advisers) && data.advisers.length > 0;
+    
+    let html = '';
+    
+    // 添加导航按钮
+    if (hasCommittee || hasJudges || hasAdvisers) {
+        html += `
+            <div class="committee-nav">
+                ${hasCommittee ? `<button class="committee-nav-btn active" onclick="scrollToCommitteeSection('committee-section')">Amarathon组委会<br><span class="nav-subtitle">Amarathon Committee</span></button>` : ''}
+                ${hasJudges ? `<button class="committee-nav-btn" onclick="scrollToCommitteeSection('judges-section')">Amarathon 评审团<br><span class="nav-subtitle">Amarathon Panel of Judges</span></button>` : ''}
+                ${hasAdvisers ? `<button class="committee-nav-btn" onclick="scrollToCommitteeSection('advisers-section')">Amarathon 顾问<br><span class="nav-subtitle">Amarathon Adviser</span></button>` : ''}
+            </div>
+        `;
+    }
+    
+    // 渲染组委会成员
+    if (hasCommittee) {
+        html += `
+            <div id="committee-section" class="committee-section">
+                <div class="committee-section-header">
+                    <h3 class="section-title">Amarathon 组委会</h3>
+                    <p class="section-subtitle">Amarathon Committee</p>
+                </div>
+                <div class="committee-grid">
+                    ${data.committee.map(renderMemberCard).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    // 渲染评审团
+    if (hasJudges) {
+        html += `
+            <div id="judges-section" class="committee-section">
+                <div class="committee-section-header">
+                    <h3 class="section-title">Amarathon 评审团</h3>
+                    <p class="section-subtitle">Amarathon Panel of Judges</p>
+                </div>
+                <div class="committee-grid">
+                    ${data.judges.map(renderMemberCard).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    // 渲染顾问团
+    if (hasAdvisers) {
+        html += `
+            <div id="advisers-section" class="committee-section">
+                <div class="committee-section-header">
+                    <h3 class="section-title">Amarathon 顾问</h3>
+                    <p class="section-subtitle">Amarathon Adviser</p>
+                </div>
+                <div class="committee-grid">
+                    ${data.advisers.map(renderMemberCard).join('')}
+                </div>
+            </div>
+        `;
+    }
+    
+    if (html === '') {
+        container.innerHTML = '<div class="empty-state">暂无组委会信息</div>';
+    } else {
+        container.innerHTML = html;
+    }
 }
 
 // 显示空状态
