@@ -797,7 +797,8 @@
           "url": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
           "src": "images/social-icons/douyin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/lishaoyi.png"
     },
     {
       "name": "许业宝 Yebao Xu",
@@ -815,7 +816,8 @@
           "url": "https://xybdiy.blog.csdn.net/",
           "src": "images/social-icons/csdn.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/xuyebao.png"
     },
     {
       "name": "赵安娜 Anna Zhao",
@@ -830,7 +832,8 @@
           "url": "https://www.linkedin.com/in/anna-zhao-a83690334",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/zhaoanna.png"
     },
     {
       "name": "张润迪 Rundi Zhang",
@@ -845,7 +848,8 @@
           "url": "https://www.linkedin.com/in/rundi-zhang-030060305",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/zhangrundi.png"
     },
     {
       "name": "马萍 Ping Ma",
@@ -860,7 +864,8 @@
           "url": "https://www.linkedin.com/in/%E8%90%8D-%E9%A9%AC-2b8038a5",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/maping.png"
     },
     {
       "name": "Kenny Chan",
@@ -882,7 +887,8 @@
           "url": "https://kennychen.frontiertechcap.com/",
           "src": "images/social-icons/website.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/kennychan.png"
     },
     {
       "name": "李小飞 XiaoFei Li",
@@ -901,7 +907,8 @@
           "url": "https://blog.csdn.net/rralucard123",
           "src": "images/social-icons/csdn.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/lixiaofei.png"
     }
   ],
   "judges": [
@@ -910,7 +917,8 @@
       "position": "亚马逊云科技Brand & Developer MKT Leader",
       "job": "内容评审",
       "jobEn": "Responsible for reviewing speaker proposals",
-      "share": []
+      "share": [],
+      "poster": "images/2024/amarathon12/lizhao.png"
     },
     {
       "name": "郑予彬 Betty",
@@ -922,7 +930,8 @@
           "url": "https://www.linkedin.com/in/betty-zheng-5420357a/",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/betty.png"
     },
     {
       "name": "潘娟 Juan Pan",
@@ -938,7 +947,8 @@
           "url": "https://twitter.com/tristaZero",
           "src": "images/social-icons/twitter.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/panjuan.png"
     }
   ],
   "advisers": [
@@ -955,7 +965,8 @@
           "url": "https://x.com/typhon666_death",
           "src": "images/social-icons/twitter.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/shunyoshie.png"
     },
     {
       "name": "吕凌曦 Smile",
@@ -966,7 +977,8 @@
           "url": "https://www.linkedin.com/in/smile-lingxi-lv-239b6335",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/smile.png"
     },
     {
       "name": "刘洋琳",
@@ -977,7 +989,8 @@
           "url": "https://www.linkedin.com/in/yanglin-liu-5aba5299/",
           "src": "images/social-icons/linkedin.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/liuyanglin.png"
     },
     {
       "name": "王萃 Tracy Wang",
@@ -992,7 +1005,8 @@
           "url": "https://s12d.com/xiaohongshu",
           "src": "images/social-icons/xiaohongshu.png"
         }
-      ]
+      ],
+      "poster": "images/2024/amarathon12/tracywang.png"
     }
   ]
 }
