@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "firstName": "Yagr",
+    "lastName": "Xu",
+    "sessionTitle": "Observability for Serverless\n无服务器架构的可观测性",
+    "sessionSummary":
+      "Amazon Web Services provides comprehensive observability for serverless through logs in CloudWatch Logs, metrics and insights in CloudWatch, and distributed tracing with X-Ray. Additionally, Amazon Distro for OpenTelemetry (ADOT) enables standardized telemetry data collection, while Amazon Lambda Power Tools simplifies logging, metrics, and tracing for Lambda functions. Leveraging these tools, you can gain deep visibility into function invocations, performance, and end-to-end request flows. ADOT and Power Tools enhance observability by automating instrumentation and providing consistent observability data across your serverless applications. With this observability stack, you can monitor, debug, and optimize your serverless workloads, ensuring reliability and performance.\n亚马逊云科技通过 CloudWatch Logs 中的日志、CloudWatch 中的指标和洞察，以及 X-Ra
