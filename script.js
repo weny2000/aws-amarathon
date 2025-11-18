@@ -82,7 +82,10 @@ function selectTab(tab) {
 function showLoading() {
     AppState.isLoading = true;
     const loadingHTML = '<div class="loading-spinner">🔄 加载中...</div>';
-    document.getElementById('bannerContent').innerHTML = loadingHTML;
+    const container = document.getElementById('bannerContent');
+    if (container) {
+        container.innerHTML = loadingHTML;
+    }
 }
 
 // 隐藏加载状态
@@ -268,6 +271,8 @@ function renderContent(year) {
 function renderIntroduction(introduction) {
     const container = document.getElementById('introductionContent');
     
+    if (!container) return;
+    
     if (!introduction) {
         container.innerHTML = '';
         return;
@@ -289,6 +294,8 @@ function renderIntroduction(introduction) {
 // 渲染直播安排
 function renderLiveSchedule(liveSchedule) {
     const container = document.getElementById('liveScheduleContent');
+    
+    if (!container) return;
     
     if (!liveSchedule) {
         container.innerHTML = '';
@@ -344,6 +351,8 @@ function renderLiveSchedule(liveSchedule) {
 function renderLiveStatus(liveStatus, slackInvite, termsLink) {
     const container = document.getElementById('liveStatusContent');
     
+    if (!container) return;
+    
     if (!liveStatus) {
         container.innerHTML = '';
         return;
@@ -380,6 +389,8 @@ function renderLiveStatus(liveStatus, slackInvite, termsLink) {
 // 渲染合作伙伴
 function renderPartners(partners) {
     const container = document.getElementById('partnersContent');
+    
+    if (!container) return;
     
     if (!partners) {
         container.innerHTML = '';
@@ -450,6 +461,8 @@ function renderPartners(partners) {
 function renderAnnouncement(announcement) {
     const container = document.getElementById('announcementContent');
     
+    if (!container) return;
+    
     if (!announcement) {
         container.innerHTML = '<div class="empty-state">暂无活动召集信息</div>';
         return;
@@ -468,6 +481,8 @@ function renderAnnouncement(announcement) {
 function renderBanner(banner) {
     const container = document.getElementById('bannerContent');
     
+    if (!container) return;
+    
     if (!banner) {
         container.innerHTML = '<div class="banner-placeholder">🏃 Amarathon ' + currentYear + '</div>';
         return;
@@ -483,6 +498,11 @@ function renderBanner(banner) {
 // 渲染UG图表
 function renderUG(userGroups) {
     const container = document.getElementById('ugContent');
+    
+    // 如果容器不存在，直接返回（避免错误）
+    if (!container) {
+        return;
+    }
     
     if (!userGroups || userGroups.length === 0) {
         container.innerHTML = '<div class="empty-state">暂无用户组数据</div>';
@@ -506,6 +526,8 @@ function renderUG(userGroups) {
 // 渲染活动图片
 function renderGallery(gallery) {
     const container = document.getElementById('galleryContent');
+    
+    if (!container) return;
     
     if (!gallery || gallery.length === 0) {
         container.innerHTML = '<div class="empty-state">暂无活动图片</div>';
@@ -538,6 +560,8 @@ function renderGallery(gallery) {
 // 渲染演讲议程
 function renderAgenda(agenda) {
     const container = document.getElementById('agendaContent');
+    
+    if (!container) return;
     
     if (!agenda || agenda.length === 0) {
         container.innerHTML = '<div class="empty-state">暂无演讲议程</div>';
@@ -601,6 +625,8 @@ function renderAgenda(agenda) {
 function renderCommittee(committee) {
     const container = document.getElementById('committeeContent');
     
+    if (!container) return;
+    
     if (!committee || committee.length === 0) {
         container.innerHTML = '<div class="empty-state">暂无组委会信息</div>';
         return;
@@ -643,22 +669,25 @@ function renderCommittee(committee) {
 
 // 显示空状态
 function showEmptyState() {
-    document.getElementById('bannerContent').innerHTML = 
-        '<div class="empty-state">暂无活动信息</div>';
-    document.getElementById('introductionContent').innerHTML = '';
-    document.getElementById('liveScheduleContent').innerHTML = '';
-    document.getElementById('liveStatusContent').innerHTML = '';
-    document.getElementById('partnersContent').innerHTML = '';
-    document.getElementById('announcementContent').innerHTML = 
-        '<div class="empty-state">暂无活动召集</div>';
-    document.getElementById('ugContent').innerHTML = 
-        '<div class="empty-state">暂无用户组数据</div>';
-    document.getElementById('galleryContent').innerHTML = 
-        '<div class="empty-state">暂无活动图片</div>';
-    document.getElementById('agendaContent').innerHTML = 
-        '<div class="empty-state">暂无演讲议程</div>';
-    document.getElementById('committeeContent').innerHTML = 
-        '<div class="empty-state">暂无组委会信息</div>';
+    const elements = {
+        'bannerContent': '<div class="empty-state">暂无活动信息</div>',
+        'introductionContent': '',
+        'liveScheduleContent': '',
+        'liveStatusContent': '',
+        'partnersContent': '',
+        'announcementContent': '<div class="empty-state">暂无活动召集</div>',
+        'ugContent': '<div class="empty-state">暂无用户组数据</div>',
+        'galleryContent': '<div class="empty-state">暂无活动图片</div>',
+        'agendaContent': '<div class="empty-state">暂无演讲议程</div>',
+        'committeeContent': '<div class="empty-state">暂无组委会信息</div>'
+    };
+    
+    Object.keys(elements).forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = elements[id];
+        }
+    });
 }
 
 // 默认数据
