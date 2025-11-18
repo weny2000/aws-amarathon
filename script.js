@@ -813,6 +813,20 @@ function getDefaultData() {
     };
 }
 
+// 滚动到组委会分组
+function scrollToCommitteeSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // 更新导航按钮状态
+        document.querySelectorAll('.committee-nav-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+}
+
 // 浏览器历史记录支持
 window.addEventListener('popstate', function(event) {
     loadStateFromURL();
@@ -830,5 +844,6 @@ window.AmarathonSPA = {
     selectYear,
     selectTab,
     loadData,
-    renderContent
+    renderContent,
+    scrollToCommitteeSection
 };
