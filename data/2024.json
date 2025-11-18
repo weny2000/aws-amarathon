@@ -27,32 +27,32 @@
         {
           "name": "InfoQ",
           "link": "https://www.infoq.cn/",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_infoq.png"
+          "logo": "https://static001.infoq.cn/resource/image/95/3f/95d6a7d4b1e5b3f3c3f3c3f3c3f3c3f3.png"
         },
         {
           "name": "SegmentFault",
           "link": "https://segmentfault.com/",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_segmentfault.png"
+          "logo": "https://cdn.segmentfault.com/v-5d2ffc9a/global/img/logo.svg"
         },
         {
           "name": "ITPUB",
           "link": "https://www.itpub.net",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_itpub.png"
+          "logo": "https://www.itpub.net/static/image/common/logo.png"
         },
         {
           "name": "GitCode",
           "link": "https://gitcode.com/",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_gitcode.png"
+          "logo": "https://gitcode.com/assets/favicon-d3d6f1e8.png"
         },
         {
           "name": "MSUP",
           "link": "https://msup.com.cn/",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_msup.png"
+          "logo": "https://msup.com.cn/static/images/logo.png"
         },
         {
           "name": "RTE Community",
           "link": "https://www.rtecommunity.dev",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_rtecommunity.png"
+          "logo": "https://www.rtecommunity.dev/favicon.ico"
         }
       ]
     },
@@ -62,7 +62,7 @@
         {
           "name": "微信视频号",
           "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_simba.png"
+          "logo": "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico"
         }
       ]
     },
@@ -72,12 +72,12 @@
         {
           "name": "开源中国",
           "link": "https://www.oschina.net/",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_开源中国.png"
+          "logo": "https://static.oschina.net/new-osc/img/logo_new.svg"
         },
         {
           "name": "CSDN",
           "link": "https://www.csdn.net",
-          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_csdn.png"
+          "logo": "https://g.csdnimg.cn/static/logo/favicon32.ico"
         }
       ]
     }

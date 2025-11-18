@@ -568,11 +568,45 @@ function renderAgenda(agenda) {
         return;
     }
     
+    // 提取唯一的难度级别和语言用于筛选
+    const levels = [...new Set(agenda.map(item => item.sessionLevel || 'Level 200'))];
+    const languages = [...new Set(agenda.map(item => item.language || 'English'))];
+    
     container.innerHTML = `
-        <div class="agenda-cards">
-            ${agenda.map(item => `
-                <div class="agenda-card">
-                    <div class="agenda-badge">${item.sessionLevel || 'Level 200'}</div>
+        <div class="agenda-filters">
+            <div class="filter-group">
+                <label>难度级别：</label>
+                <select id="levelFilter" onchange="filterAgenda()">
+                    <option value="all">全部</option>
+                    ${levels.map(level => `<option value="${level}">${level}</option>`).join('')}
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>语言：</label>
+                <select id="languageFilter" onchange="filterAgenda()">
+                    <option value="all">全部</option>
+                    ${languages.map(lang => `<option value="${lang}">${lang}</option>`).join('')}
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" id="searchInput" placeholder="搜索演讲标题或演讲者..." onkeyup="filterAgenda()">
+            </div>
+        </div>
+        <div class="agenda-cards" id="agendaCards">
+            ${agenda.map((item, index) => {
+                // 分离中英文标题
+                const titles = (item.sessionTitle || item.title || '').split('\n');
+                const titleEn = titles[0] || '';
+                const titleCn = titles[1] || '';
+                
+                // 分离中英文摘要（通常用换行符分隔）
+                const summaries = (item.sessionSummary || item.description || '').split('\n');
+                const summaryEn = summaries[0] || '';
+                const summaryCn = summaries[1] || '';
+                
+                return `
+                <div class="agenda-card" data-level="${item.sessionLevel || 'Level 200'}" data-language="${item.language || 'English'}" data-index="${index}">
+                    <div class="agenda-badge ${getLevelClass(item.sessionLevel)}">${item.sessionLevel || 'Level 200'}</div>
                     <div class="agenda-card-content">
                         <div class="agenda-time-section">
                             <div class="time-item">
@@ -585,11 +619,31 @@ function renderAgenda(agenda) {
                                     <span class="time-value">${item.sessionTimeBeijing}</span>
                                 </div>
                             ` : ''}
+                            ${item.language ? `
+                                <div class="language-badge">
+                                    <span class="language-icon">${getLanguageIcon(item.language)}</span>
+                                    <span>${item.language}</span>
+                                </div>
+                            ` : ''}
                         </div>
                         <div class="agenda-right-section">
                             <div class="agenda-desc-section">
-                                <h3 class="session-title">${item.sessionTitle || item.title}</h3>
-                                <p class="session-summary">${item.sessionSummary || item.description}</p>
+                                <h3 class="session-title">
+                                    ${titleEn}
+                                    ${titleCn ? `<span class="title-cn">${titleCn}</span>` : ''}
+                                </h3>
+                                <div class="session-summary-container">
+                                    <p class="session-summary ${index > 2 ? 'collapsed' : ''}" id="summary-${index}">
+                                        ${summaryEn}
+                                        ${summaryCn ? `<br><br>${summaryCn}` : ''}
+                                    </p>
+                                    ${(summaryEn + summaryCn).length > 300 ? `
+                                        <button class="toggle-summary" onclick="toggleSummary(${index})">
+                                            <span class="expand-text">展开更多</span>
+                                            <span class="collapse-text" style="display:none;">收起</span>
+                                        </button>
+                                    ` : ''}
+                                </div>
                             </div>
                             <div class="agenda-bottom-section">
                                 <div class="speaker-info">
@@ -600,7 +654,7 @@ function renderAgenda(agenda) {
                                     `}
                                     <div class="speaker-details">
                                         <div class="speaker-name">${item.firstName && item.lastName ? `${item.firstName} ${item.lastName}` : item.speaker}</div>
-                                        ${item.country ? `<div class="speaker-country">${item.country}</div>` : ''}
+                                        ${item.country ? `<div class="speaker-country">📍 ${item.country}</div>` : ''}
                                         ${item.title ? `<div class="speaker-title">${item.title}</div>` : ''}
                                     </div>
                                 </div>
@@ -616,9 +670,91 @@ function renderAgenda(agenda) {
                         </div>
                     </div>
                 </div>
-            `).join('')}
+            `;
+            }).join('')}
         </div>
     `;
+}
+
+// 获取难度级别对应的CSS类
+function getLevelClass(level) {
+    if (!level) return 'level-200';
+    if (level.includes('300')) return 'level-300';
+    if (level.includes('400')) return 'level-400';
+    return 'level-200';
+}
+
+// 获取语言图标
+function getLanguageIcon(language) {
+    const icons = {
+        'English': '🇬🇧',
+        'Chinese': '🇨🇳',
+        'Japanese': '🇯🇵',
+        'French': '🇫🇷',
+        'Francais': '🇫🇷',
+        'Spanish': '🇪🇸',
+        'German': '🇩🇪'
+    };
+    return icons[language] || '🌐';
+}
+
+// 切换摘要展开/收起
+function toggleSummary(index) {
+    const summary = document.getElementById(`summary-${index}`);
+    const button = event.target.closest('.toggle-summary');
+    
+    if (summary.classList.contains('collapsed')) {
+        summary.classList.remove('collapsed');
+        button.querySelector('.expand-text').style.display = 'none';
+        button.querySelector('.collapse-text').style.display = 'inline';
+    } else {
+        summary.classList.add('collapsed');
+        button.querySelector('.expand-text').style.display = 'inline';
+        button.querySelector('.collapse-text').style.display = 'none';
+    }
+}
+
+// 筛选议程
+function filterAgenda() {
+    const levelFilter = document.getElementById('levelFilter')?.value || 'all';
+    const languageFilter = document.getElementById('languageFilter')?.value || 'all';
+    const searchInput = document.getElementById('searchInput')?.value.toLowerCase() || '';
+    
+    const cards = document.querySelectorAll('.agenda-card');
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        const level = card.getAttribute('data-level');
+        const language = card.getAttribute('data-language');
+        const text = card.textContent.toLowerCase();
+        
+        const levelMatch = levelFilter === 'all' || level === levelFilter;
+        const languageMatch = languageFilter === 'all' || language === languageFilter;
+        const searchMatch = searchInput === '' || text.includes(searchInput);
+        
+        if (levelMatch && languageMatch && searchMatch) {
+            card.style.display = 'block';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // 显示筛选结果提示
+    const container = document.getElementById('agendaCards');
+    let resultHint = container.querySelector('.filter-result-hint');
+    
+    if (visibleCount === 0) {
+        if (!resultHint) {
+            resultHint = document.createElement('div');
+            resultHint.className = 'filter-result-hint';
+            container.insertBefore(resultHint, container.firstChild);
+        }
+        resultHint.textContent = '没有找到匹配的演讲议程';
+        resultHint.style.display = 'block';
+    } else if (resultHint) {
+        resultHint.style.display = 'none';
+    }
 }
 
 // 渲染组委会

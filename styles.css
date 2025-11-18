@@ -1499,3 +1499,198 @@ main {
         padding: 10px 20px;
     }
 }
+
+/* 议程筛选器样式 */
+.agenda-filters {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px solid #e0e7ff;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+.filter-group select,
+.filter-group input[type="text"] {
+    padding: 10px 16px;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    color: #1a1a1a;
+    transition: all 0.2s;
+    min-width: 150px;
+}
+
+.filter-group select:focus,
+.filter-group input[type="text"]:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.filter-group input[type="text"] {
+    min-width: 250px;
+}
+
+/* 难度级别徽章颜色 */
+.agenda-badge.level-200 {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.agenda-badge.level-300 {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.agenda-badge.level-400 {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* 语言徽章 */
+.language-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: white;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6366f1;
+    border: 2px solid #e0e7ff;
+    margin-top: 8px;
+}
+
+.language-icon {
+    font-size: 16px;
+}
+
+/* 标题中文部分样式 */
+.title-cn {
+    display: block;
+    font-size: 16px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* 摘要容器 */
+.session-summary-container {
+    position: relative;
+}
+
+.session-summary.collapsed {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.session-summary.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #fafbff);
+}
+
+.toggle-summary {
+    background: none;
+    border: none;
+    color: #6366f1;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-top: 8px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.toggle-summary:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+.toggle-summary::after {
+    content: '▼';
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.toggle-summary:has(.collapse-text:not([style*="display: none"]))::after {
+    transform: rotate(180deg);
+}
+
+/* 筛选结果提示 */
+.filter-result-hint {
+    text-align: center;
+    padding: 40px;
+    color: #9ca3af;
+    font-size: 16px;
+    background: #f9fafb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .agenda-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group select,
+    .filter-group input[type="text"] {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .agenda-card-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .agenda-time-section {
+        border-left: none;
+        border-top: 4px solid #6366f1;
+        padding-left: 0;
+        padding-top: 16px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .agenda-bottom-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .speaker-social {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
