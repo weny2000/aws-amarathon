@@ -1,58 +1,93 @@
 {
-  "eventInfo": {
-    "title": "Amarathon 2024 - 12小时技术马拉松",
-    "theme": "No Border",
-    "date": "2024年11月23日",
-    "description": "Amarathon 源于 Amazon 和 Marathon 结合，代表着坚持不懈的分享和探索精神"
+  "banner": {
+    "image": "",
+    "alt": "Amarathon 2024"
+  },
+  "introduction": {
+    "title": "\"Amarathon\" 是由亚马逊云科技 User Group 开发者中国社区发起的 12 小时线上玩法",
+    "subtitle": "\"Amarathon\" 源于 \"Amazon\" 和 \"Marathon\" 结合，代表着坚持不懈的分享和探索精神。在 \"Amarathon 12-Hour Geek Talk\" 活动中，根据引进闪电演讲的方式呈现，聚集云计算、云原生、DevOps、生成式 AI 等前沿领域，与全球开发者共同学习，探索亚马逊云科技的无限潜能！",
+    "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the 亚马逊云科技 China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
+    "theme": "\"No Border\"",
+    "themeDescription": "今年的活动主题为 \"No Border\"，无论你们都在哪，无论你们自哪里，\"亚跑拉松\"打破地域、国家和语言的限制，一起奔跑狂欢！"
   },
   "liveStatus": {
-    "status": "ended",
-    "replayLink": "https://space.bilibili.com/418158141/channel/collectiondetail?sid=4250716"
+    "status": "直播已结束（Live Ended）",
+    "replayLink": "https://space.bilibili.com/418158141/channel/collectiondetail?sid=4250716",
+    "replayDescription": "观看直播回放单人cut，欢迎访问B站Amarathon专题页"
   },
+  "slackInvite": {
+    "link": "https://join.slack.com/t/awsgcrusergroup/shared_invite/zt-2uepy27c7-VRAm~lXBByNhFGnQdTx6aA",
+    "description": "加入AWS GCR User Group Slack社区"
+  },
+  "termsLink": "https://dev-media.amazoncloud.cn/terms-of-events/terms%20and%20conditions.pdf",
   "partners": {
-    "liveAlliance": [
-      {
-        "name": "InfoQ",
-        "link": "https://www.infoq.cn/"
-      },
-      {
-        "name": "SegmentFault",
-        "link": "https://segmentfault.com/"
-      },
-      {
-        "name": "ITPUB",
-        "link": "https://www.itpub.net"
-      },
-      {
-        "name": "GitCode",
-        "link": "https://gitcode.com/"
-      },
-      {
-        "name": "MSUP",
-        "link": "https://msup.com.cn/"
-      },
-      {
-        "name": "RTE Community",
-        "link": "https://www.rtecommunity.dev"
-      }
-    ],
-    "platinumSponsor": [
-      {
-        "name": "微信视频号",
-        "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory"
-      }
-    ],
-    "communityPartners": [
-      {
-        "name": "开源中国",
-        "link": "https://www.oschina.net/"
-      },
-      {
-        "name": "CSDN",
-        "link": "https://www.csdn.net"
-      }
-    ]
+    "liveAlliance": {
+      "title": "12 小时直播联盟",
+      "partners": [
+        {
+          "name": "InfoQ",
+          "link": "https://www.infoq.cn/",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_infoq.png"
+        },
+        {
+          "name": "SegmentFault",
+          "link": "https://segmentfault.com/",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_segmentfault.png"
+        },
+        {
+          "name": "ITPUB",
+          "link": "https://www.itpub.net",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_itpub.png"
+        },
+        {
+          "name": "GitCode",
+          "link": "https://gitcode.com/",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_gitcode.png"
+        },
+        {
+          "name": "MSUP",
+          "link": "https://msup.com.cn/",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_msup.png"
+        },
+        {
+          "name": "RTE Community",
+          "link": "https://www.rtecommunity.dev",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_rtecommunity.png"
+        }
+      ]
+    },
+    "platinumSponsor": {
+      "title": "铂金赞助",
+      "partners": [
+        {
+          "name": "微信视频号",
+          "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_simba.png"
+        }
+      ]
+    },
+    "communityPartners": {
+      "title": "社区合作",
+      "partners": [
+        {
+          "name": "开源中国",
+          "link": "https://www.oschina.net/",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_开源中国.png"
+        },
+        {
+          "name": "CSDN",
+          "link": "https://www.csdn.net",
+          "logo": "https://dev-media.amazoncloud.cn/client-250819071524/img/partner_logo_csdn.png"
+        }
+      ]
+    }
   },
+  "announcement": {
+    "title": "2024 Amarathon 技术马拉松圆满结束",
+    "date": "2024年11月23日",
+    "description": "2024年度亚马逊云科技技术马拉松活动已圆满结束！本次活动汇聚了来自全球36位技术专家，进行了12小时不间断的技术分享，涵盖云计算、AI、数据库、安全等多个领域。感谢所有参与者、讲师和志愿者的支持！"
+  },
+  "gallery": [],
   "agenda": [
     {
       "id": 1,
@@ -745,12 +780,24 @@
       "position": "CN-UG Committee Member, Co-founder of Amarathon Geek Talk, Amazon Community Hero, Amazon GCR Advocate Blogger",
       "job": "项目计划、技术负责人",
       "jobEn": "Lead for event technical solutions. Responsible for event planning and management. Promote the Amarathon event to the global to boost its international exposure.",
-      "socialMedia": {
-        "xiaohongshu": "https://s12d.com/xiaolige",
-        "csdn": "https://blog.csdn.net/m0_66628975?spm=1000.2115.3001.5343",
-        "douyin": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
-        "linkedIn": "https://www.linkedin.com/in/shaoyi-li-096835140/"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/shaoyi-li-096835140/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://blog.csdn.net/m0_66628975?spm=1000.2115.3001.5343",
+          "src": "images/social/csdn.png"
+        },
+        {
+          "url": "https://s12d.com/xiaolige",
+          "src": "images/social/xiaohongshu.png"
+        },
+        {
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
+          "src": "images/social/douyin.png"
+        }
+      ]
     },
     {
       "name": "许业宝 Yebao Xu",
@@ -759,10 +806,16 @@
       "descEn": "An Amazon UGL member and technical blogger, organizing community events and providing technical support. Holds multiple Amazon certifications, publishes technical blogs, shares expertise, and focuses on cloud-native solutions, promoting cloud products and services.",
       "job": "讲师招募、活动支持、直播支持",
       "jobEn": "Responsible for speaker recruitment, event and livestream support",
-      "socialMedia": {
-        "csdn": "https://xybdiy.blog.csdn.net/",
-        "linkedIn": "https://www.linkedin.com/in/yebao-xu-aa9283201/"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/yebao-xu-aa9283201/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://xybdiy.blog.csdn.net/",
+          "src": "images/social/csdn.png"
+        }
+      ]
     },
     {
       "name": "赵安娜 Anna Zhao",
@@ -772,9 +825,12 @@
       "descEn": "An Amazon UGL member primarily responsible for organizing and planning various UG community events, including Community Day and UG Meetups. Duties include event execution, brand image planning, visual design, copywriting, and event promotion. Enhances the community's influence and visibility, attracting more tech enthusiasts to join the UG community.",
       "job": "项目策划、内容策划、活动宣发、主持人",
       "jobEn": "Project planning, Content planning, Event promotion, Host",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/anna-zhao-a83690334"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/anna-zhao-a83690334",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "张润迪 Rundi Zhang",
@@ -784,9 +840,12 @@
       "descEn": "As an Amazon UGL member, primarily responsible for planning and executing events such as Community Day and Meetups. Committed to promoting technical exchange and knowledge sharing, inspiring community engagement, and allowing participants to experience the cultural charm of Guangzhou.",
       "job": "合作伙伴招募、活动礼品策划",
       "jobEn": "Managed partner and sponsor recruitment, and event gift planning",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/rundi-zhang-030060305"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/rundi-zhang-030060305",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "马萍 Ping Ma",
@@ -796,9 +855,12 @@
       "descEn": "As an Amazon UGL member, primarily responsible for community member management and planning and executing networking and sharing events in the Shanghai area. Committed to promoting technical exchange and knowledge sharing, enhancing the community's influence and visibility, and attracting more tech enthusiasts to join the UG community.",
       "job": "创意策划",
       "jobEn": "Creative Strategy",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/%E8%90%8D-%E9%A9%AC-2b8038a5"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/%E8%90%8D-%E9%A9%AC-2b8038a5",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "Kenny Chan",
@@ -807,11 +869,20 @@
       "descEn": "Amazon Community Builder specializing in FinTech, deep learning, and macro trading. Responsible for overseas enterprise, GenAI, and financial services solutions. Promotes the \"Think Big, Start Small, Learn Fast\" philosophy within the community and is a partner at \"Frontier Capital,\" providing venture and macro asset allocation solutions. Recipient of multiple venture competition awards, including the Open Data Hackathon 2023 (Public Stream Champion) and the Hong Kong/Shanghai Co-operation Open Data Challenge 2024 (Smart Environment Award & Smart Economy Award), among others.",
       "job": "出海宣发",
       "jobEn": "Responsible for global media publications and media PR promotion",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/kenny-chen-a560a8241/",
-        "devto": "https://dev.to/kennc",
-        "website": "https://kennychen.frontiertechcap.com/"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/kenny-chen-a560a8241/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://dev.to/kennc",
+          "src": "images/social/devto.png"
+        },
+        {
+          "url": "https://kennychen.frontiertechcap.com/",
+          "src": "images/social/website.png"
+        }
+      ]
     },
     {
       "name": "李小飞 XiaoFei Li",
@@ -821,10 +892,16 @@
       "descEn": "An Amazon UG Ambassador and technology blogger specializing in cloud migration and AI solutions, recognized as a 2023 and 2024 Amazon All Certifications Engineer and an award winner at the 2024 Shanghai Summit Golden Jacket. Actively publishes technical blogs and shares insights, contributing to the planning and execution of community events to enhance community influence and awareness, attracting more tech enthusiasts to join the UG community.",
       "job": "内容策划、活动支持、活动宣发",
       "jobEn": "Content planning, Event support and promotion",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/xiaofei-li-3a78289a/",
-        "csdn": "https://blog.csdn.net/rralucard123"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/xiaofei-li-3a78289a/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://blog.csdn.net/rralucard123",
+          "src": "images/social/csdn.png"
+        }
+      ]
     }
   ],
   "judges": [
@@ -832,26 +909,36 @@
       "name": "李钊 Li Zhao",
       "position": "亚马逊云科技Brand & Developer MKT Leader",
       "job": "内容评审",
-      "jobEn": "Responsible for reviewing speaker proposals"
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": []
     },
     {
       "name": "郑予彬 Betty",
       "position": "Senior Developer Advocate 资深开发者布道师",
       "job": "内容评审",
       "jobEn": "Responsible for reviewing speaker proposals",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/betty-zheng-5420357a/"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/betty-zheng-5420357a/",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "潘娟 Juan Pan",
       "position": "Amazon Data hero",
       "job": "内容评审",
       "jobEn": "Responsible for reviewing speaker proposals",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/panjuan",
-        "twitter": "https://twitter.com/tristaZero"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/panjuan",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://twitter.com/tristaZero",
+          "src": "images/social/twitter.png"
+        }
+      ]
     }
   ],
   "advisers": [
@@ -859,35 +946,53 @@
       "name": "Shun Yoshie",
       "desc": "Amazon Security Hero (ex-Amazon Community Hero). Originator of JAWS PANKRATION and executive committee chair of JAWS PANKRATION 2021 and 2024. In Japan, in addition to managing Security-JAWS, he has also managed several Amazon community events.",
       "descEn": "Currently working as an IT security consultant. My favorite Amazon service is Amazon Security Hub & Amazon WAF. My favorite technology is CNAPP.",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
-        "twitter": "https://x.com/typhon666_death"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://x.com/typhon666_death",
+          "src": "images/social/twitter.png"
+        }
+      ]
     },
     {
       "name": "吕凌曦 Smile",
       "desc": "Amazon 开发者体验（DevEx）团队社区项目经理，负责大中华区 Hero 社区项目和 Community Builder 社区项目，致力于构建全球中文开发者社区。",
       "descEn": "Amazon Developer Experience advocacy Program Manager，supporting Hero Program, Community Program in Greater China region and global Chinese developer community.",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/smile-lingxi-lv-239b6335"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/smile-lingxi-lv-239b6335",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "刘洋琳",
       "desc": "Amazon Community Manager（Builder Marketing Manager）亚马逊中国User Group开发者社区负责人，也是亚麻拉松（Amarathon）发起人和创始人之一。",
       "descEn": "Amazon Builder Marketing Manager，The community manager of the Amazon China User Group, and one of the initiators and founders of the Amarathon",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/yanglin-liu-5aba5299/"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/yanglin-liu-5aba5299/",
+          "src": "images/social/linkedin.png"
+        }
+      ]
     },
     {
       "name": "王萃 Tracy Wang",
       "desc": "亚马逊云科技学术倡导团队学生社区项目经理，负责全球学生社区- Amazon Cloud Clubs 项目设计和运营。",
       "descEn": "Amazon Academic Advocacy Team Student Community Program Manager, responsible for global student community-Amazon Cloud Clubs program design and operation.",
-      "socialMedia": {
-        "linkedIn": "https://www.linkedin.com/in/tracywangcc/",
-        "xiaohongshu": "https://s12d.com/xiaohongshu"
-      }
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/tracywangcc/",
+          "src": "images/social/linkedin.png"
+        },
+        {
+          "url": "https://s12d.com/xiaohongshu",
+          "src": "images/social/xiaohongshu.png"
+        }
+      ]
     }
   ]
 }
