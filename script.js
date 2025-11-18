@@ -389,51 +389,57 @@ function renderPartners(partners) {
     let html = '<div class="partners-container">';
     
     // 12小时直播联盟
-    if (partners.liveAlliance && partners.liveAlliance.partners && Array.isArray(partners.liveAlliance.partners)) {
-        html += `
-            <div class="partner-category">
-                <h3 class="partner-title">${partners.liveAlliance.title}</h3>
-                <div class="partner-logos">
-                    ${partners.liveAlliance.partners.map(partner => `
-                        <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
-                            <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
-                        </a>
-                    `).join('')}
+    if (partners.liveAlliance) {
+        if (partners.liveAlliance.partners && Array.isArray(partners.liveAlliance.partners) && partners.liveAlliance.partners.length > 0) {
+            html += `
+                <div class="partner-category">
+                    <h3 class="partner-title">${partners.liveAlliance.title}</h3>
+                    <div class="partner-logos">
+                        ${partners.liveAlliance.partners.map(partner => `
+                            <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
+                                <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
+                            </a>
+                        `).join('')}
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
     }
     
     // 铂金赞助
-    if (partners.platinumSponsor && partners.platinumSponsor.partners && Array.isArray(partners.platinumSponsor.partners)) {
-        html += `
-            <div class="partner-category">
-                <h3 class="partner-title">${partners.platinumSponsor.title}</h3>
-                <div class="partner-logos">
-                    ${partners.platinumSponsor.partners.map(partner => `
-                        <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
-                            <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
-                        </a>
-                    `).join('')}
+    if (partners.platinumSponsor) {
+        if (partners.platinumSponsor.partners && Array.isArray(partners.platinumSponsor.partners) && partners.platinumSponsor.partners.length > 0) {
+            html += `
+                <div class="partner-category">
+                    <h3 class="partner-title">${partners.platinumSponsor.title}</h3>
+                    <div class="partner-logos">
+                        ${partners.platinumSponsor.partners.map(partner => `
+                            <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
+                                <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
+                            </a>
+                        `).join('')}
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
     }
     
     // 社区合作
-    if (partners.communityPartners && partners.communityPartners.partners && Array.isArray(partners.communityPartners.partners)) {
-        html += `
-            <div class="partner-category">
-                <h3 class="partner-title">${partners.communityPartners.title}</h3>
-                <div class="partner-logos">
-                    ${partners.communityPartners.partners.map(partner => `
-                        <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
-                            <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
-                        </a>
-                    `).join('')}
+    if (partners.communityPartners) {
+        if (partners.communityPartners.partners && Array.isArray(partners.communityPartners.partners) && partners.communityPartners.partners.length > 0) {
+            html += `
+                <div class="partner-category">
+                    <h3 class="partner-title">${partners.communityPartners.title}</h3>
+                    <div class="partner-logos">
+                        ${partners.communityPartners.partners.map(partner => `
+                            <a href="${partner.link}" target="_blank" rel="noopener noreferrer" class="partner-logo-link">
+                                <img src="${partner.logo}" alt="${partner.name}" class="partner-logo">
+                            </a>
+                        `).join('')}
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
     }
     
     html += '</div>';
