@@ -389,7 +389,7 @@ function renderPartners(partners) {
     let html = '<div class="partners-container">';
     
     // 12小时直播联盟
-    if (partners.liveAlliance) {
+    if (partners.liveAlliance && partners.liveAlliance.partners && Array.isArray(partners.liveAlliance.partners)) {
         html += `
             <div class="partner-category">
                 <h3 class="partner-title">${partners.liveAlliance.title}</h3>
@@ -405,7 +405,7 @@ function renderPartners(partners) {
     }
     
     // 铂金赞助
-    if (partners.platinumSponsor) {
+    if (partners.platinumSponsor && partners.platinumSponsor.partners && Array.isArray(partners.platinumSponsor.partners)) {
         html += `
             <div class="partner-category">
                 <h3 class="partner-title">${partners.platinumSponsor.title}</h3>
@@ -421,7 +421,7 @@ function renderPartners(partners) {
     }
     
     // 社区合作
-    if (partners.communityPartners) {
+    if (partners.communityPartners && partners.communityPartners.partners && Array.isArray(partners.communityPartners.partners)) {
         html += `
             <div class="partner-category">
                 <h3 class="partner-title">${partners.communityPartners.title}</h3>
