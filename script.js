@@ -622,19 +622,34 @@ function renderAgenda(agenda) {
 }
 
 // 渲染组委会
-function renderCommittee(committee) {
+function renderCommittee(data) {
     const container = document.getElementById('committeeContent');
     
     if (!container) return;
     
-    if (!committee || committee.length === 0) {
+    // 合并所有成员：committee, judges, advisers
+    let allMembers = [];
+    
+    if (data.committee && Array.isArray(data.committee)) {
+        allMembers = allMembers.concat(data.committee.map(m => ({...m, role: 'committee'})));
+    }
+    
+    if (data.judges && Array.isArray(data.judges)) {
+        allMembers = allMembers.concat(data.judges.map(m => ({...m, role: 'judge'})));
+    }
+    
+    if (data.advisers && Array.isArray(data.advisers)) {
+        allMembers = allMembers.concat(data.advisers.map(m => ({...m, role: 'adviser'})));
+    }
+    
+    if (allMembers.length === 0) {
         container.innerHTML = '<div class="empty-state">暂无组委会信息</div>';
         return;
     }
     
     container.innerHTML = `
         <div class="committee-grid">
-            ${committee.map(member => `
+            ${allMembers.map(member => `
                 <div class="committee-card">
                     ${member.poster || member.photo ? `
                         <img src="${member.poster || member.photo}" alt="${member.name}" class="committee-photo">
