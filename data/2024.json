@@ -783,19 +783,19 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/shaoyi-li-096835140/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://blog.csdn.net/m0_66628975?spm=1000.2115.3001.5343",
-          "src": "images/social/csdn.png"
+          "src": "images/social-icons/csdn.png"
         },
         {
           "url": "https://s12d.com/xiaolige",
-          "src": "images/social/xiaohongshu.png"
+          "src": "images/social-icons/xiaohongshu.png"
         },
         {
           "url": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
-          "src": "images/social/douyin.png"
+          "src": "images/social-icons/douyin.png"
         }
       ]
     },
@@ -809,11 +809,11 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/yebao-xu-aa9283201/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://xybdiy.blog.csdn.net/",
-          "src": "images/social/csdn.png"
+          "src": "images/social-icons/csdn.png"
         }
       ]
     },
@@ -828,7 +828,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/anna-zhao-a83690334",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -843,7 +843,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/rundi-zhang-030060305",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -858,7 +858,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/%E8%90%8D-%E9%A9%AC-2b8038a5",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -872,15 +872,15 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/kenny-chen-a560a8241/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://dev.to/kennc",
-          "src": "images/social/devto.png"
+          "src": "images/social-icons/devto.png"
         },
         {
           "url": "https://kennychen.frontiertechcap.com/",
-          "src": "images/social/website.png"
+          "src": "images/social-icons/website.png"
         }
       ]
     },
@@ -895,11 +895,11 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/xiaofei-li-3a78289a/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://blog.csdn.net/rralucard123",
-          "src": "images/social/csdn.png"
+          "src": "images/social-icons/csdn.png"
         }
       ]
     }
@@ -920,7 +920,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/betty-zheng-5420357a/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -932,11 +932,11 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/panjuan",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://twitter.com/tristaZero",
-          "src": "images/social/twitter.png"
+          "src": "images/social-icons/twitter.png"
         }
       ]
     }
@@ -949,11 +949,11 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/shun-yoshie-6aba9970/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://x.com/typhon666_death",
-          "src": "images/social/twitter.png"
+          "src": "images/social-icons/twitter.png"
         }
       ]
     },
@@ -964,7 +964,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/smile-lingxi-lv-239b6335",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -975,7 +975,7 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/yanglin-liu-5aba5299/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         }
       ]
     },
@@ -986,11 +986,11 @@
       "share": [
         {
           "url": "https://www.linkedin.com/in/tracywangcc/",
-          "src": "images/social/linkedin.png"
+          "src": "images/social-icons/linkedin.png"
         },
         {
           "url": "https://s12d.com/xiaohongshu",
-          "src": "images/social/xiaohongshu.png"
+          "src": "images/social-icons/xiaohongshu.png"
         }
       ]
     }

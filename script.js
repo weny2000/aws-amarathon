@@ -656,7 +656,7 @@ function renderCommittee(committee) {
                         <div class="committee-social">
                             ${member.share.map(social => `
                                 <a href="${social.url}" target="_blank" rel="noopener noreferrer" class="social-icon">
-                                    ${social.src ? `<img src="${social.src}" alt="social">` : '🔗'}
+                                    ${social.src ? `<img src="${social.src}" alt="social" onerror="this.style.display='none';this.parentElement.innerHTML='🔗'">` : '🔗'}
                                 </a>
                             `).join('')}
                         </div>
