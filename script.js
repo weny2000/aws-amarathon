@@ -505,7 +505,7 @@ function renderUG(userGroups) {
     }
     
     if (!userGroups || userGroups.length === 0) {
-        container.innerHTML = '<div class="empty-state">暂无用户组数据</div>';
+        // container.innerHTML = '<div class="empty-state">暂无用户组数据</div>';
         return;
     }
     
@@ -676,7 +676,7 @@ function showEmptyState() {
         'liveStatusContent': '',
         'partnersContent': '',
         'announcementContent': '<div class="empty-state">暂无活动召集</div>',
-        'ugContent': '<div class="empty-state">暂无用户组数据</div>',
+        // 'ugContent': '<div class="empty-state">暂无用户组数据</div>',
         'galleryContent': '<div class="empty-state">暂无活动图片</div>',
         'agendaContent': '<div class="empty-state">暂无演讲议程</div>',
         'committeeContent': '<div class="empty-state">暂无组委会信息</div>'
