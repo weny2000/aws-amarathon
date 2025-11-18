@@ -27,32 +27,32 @@
         {
           "name": "InfoQ",
           "link": "https://www.infoq.cn/",
-          "logo": "https://static001.infoq.cn/resource/image/95/3f/95d6a7d4b1e5b3f3c3f3c3f3c3f3c3f3.png"
+          "logo": "https://xstaticoss.xitu.io/infoq-logo.png"
         },
         {
           "name": "SegmentFault",
           "link": "https://segmentfault.com/",
-          "logo": "https://cdn.segmentfault.com/v-5d2ffc9a/global/img/logo.svg"
+          "logo": "https://sponsor.segmentfault.com/lg.php?bannerid=0&campaignid=0&zoneid=25&loc=https%3A%2F%2Fsegmentfault.com%2F&referer=&cb=d5f3c9e3e3"
         },
         {
           "name": "ITPUB",
           "link": "https://www.itpub.net",
-          "logo": "https://www.itpub.net/static/image/common/logo.png"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='30' fill='%23d32f2f'%3EITPUB%3C/text%3E%3C/svg%3E"
         },
         {
           "name": "GitCode",
           "link": "https://gitcode.com/",
-          "logo": "https://gitcode.com/assets/favicon-d3d6f1e8.png"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='24' fill='%23e53935'%3EGitCode%3C/text%3E%3C/svg%3E"
         },
         {
           "name": "MSUP",
           "link": "https://msup.com.cn/",
-          "logo": "https://msup.com.cn/static/images/logo.png"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='30' fill='%23000'%3Emsup%3C/text%3E%3C/svg%3E"
         },
         {
           "name": "RTE Community",
           "link": "https://www.rtecommunity.dev",
-          "logo": "https://www.rtecommunity.dev/favicon.ico"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='24' fill='%231976d2'%3ERTE%3C/text%3E%3C/svg%3E"
         }
       ]
     },
@@ -60,9 +60,9 @@
       "title": "铂金赞助",
       "partners": [
         {
-          "name": "微信视频号",
+          "name": "盛信视频号",
           "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory",
-          "logo": "https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='40' height='40' x='10' y='10' rx='8' fill='%234a90e2'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='20' fill='%234a90e2'%3ESimba Innovation%3C/text%3E%3C/svg%3E"
         }
       ]
     },
@@ -72,12 +72,12 @@
         {
           "name": "开源中国",
           "link": "https://www.oschina.net/",
-          "logo": "https://static.oschina.net/new-osc/img/logo_new.svg"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='%2300a86b'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='20' fill='%2300a86b'%3EOSCHINA%3C/text%3E%3C/svg%3E"
         },
         {
           "name": "CSDN",
           "link": "https://www.csdn.net",
-          "logo": "https://g.csdnimg.cn/static/logo/favicon32.ico"
+          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='%23fc5531'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='24' fill='%23fc5531'%3ECSDN%3C/text%3E%3C/svg%3E"
         }
       ]
     }
@@ -93,6 +93,7 @@
       "id": 1,
       "firstName": "Yagr",
       "lastName": "Xu",
+      "photo": "https://avatars.githubusercontent.com/yagrxu",
       "sessionTitle": "Observability for Serverless\n无服务器架构的可观测性",
       "sessionSummary": "Amazon Web Services provides comprehensive observability for serverless through logs in CloudWatch Logs, metrics and insights in CloudWatch, and distributed tracing with X-Ray. Additionally, Amazon Distro for OpenTelemetry (ADOT) enables standardized telemetry data collection, while Amazon Lambda Power Tools simplifies logging, metrics, and tracing for Lambda functions. Leveraging these tools, you can gain deep visibility into function invocations, performance, and end-to-end request flows. ADOT and Power Tools enhance observability by automating instrumentation and providing consistent observability data across your serverless applications. With this observability stack, you can monitor, debug, and optimize your serverless workloads, ensuring reliability and performance.\n亚马逊云科技通过 CloudWatch Logs 中的日志、CloudWatch 中的指标和洞察，以及 X-Ray 的分布式 追踪，为无服务器架构提供了全面的可观测性。此外，Amazon Distro for OpenTelemetry (ADOT) 支持标准化的遥测数据收集，而 Amazon Lambda Power Tools 简化了 Lambda 函数的日志记录、指标和追踪。利用这些工具，您可以深入了解函数调用、性能和端到端的请求流程。ADOT 和 Power Tools 通过自动化的检测和一致的可观测性数据提升了无服务器应用程序的可观测性。借助这一可观测性技术栈，您可以监控、调试和优化无服务器工作负载，确保其可靠性和性能。",
       "country": "China",
@@ -112,6 +113,7 @@
       "id": 2,
       "firstName": "Sanchit",
       "lastName": "Jain",
+      "photo": "https://avatars.githubusercontent.com/sanchitdilipjain",
       "sessionTitle": "Zero ETL on Amazon Web Services - Accelerating Insights, Eliminating Complexity \n加速洞察，消除复杂度",
       "sessionSummary": "ZeroETL represents a paradigm shift in data processing, eradicating the traditional Extract, Transform, Load(ETL) complexities. Join us to explore how ZeroETL on Aamazon Web Services streamlines data pipelines, reduces latency, and accelerates insights generation.Witness the power of this transformative approach, which simplifies data workflows and boosts agility, through an interactive live demo.Discover how ZeroETL on Amazon Web Services empowers data engineers and analysts to focus on analysis rather than intricate data transformations, fostering rapid decision-making.\nZeroETL 代表了数据处 理的范式转变，消除了传统的Extract, Transform, Load(ETL)流程的复杂性。我们将一起探索 ZeroETL 在亚马逊云科技上如何简化数据管道、减少延迟并加速洞察的生成。通过互动式现场演示，见证这种变革性方法的力量，如何简化数据工作流并提升敏捷性。了解 ZeroETL 在亚马逊云科技上如何帮助数据工程师和分析师专注于分析而非复杂的数据转换，从而促进快速决策。",
       "country": "India",
