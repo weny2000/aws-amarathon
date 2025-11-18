@@ -27,32 +27,32 @@
         {
           "name": "InfoQ",
           "link": "https://www.infoq.cn/",
-          "logo": "https://xstaticoss.xitu.io/infoq-logo.png"
+          "logo": "images/2024/partners/partner_logo_infoq.png"
         },
         {
           "name": "SegmentFault",
           "link": "https://segmentfault.com/",
-          "logo": "https://sponsor.segmentfault.com/lg.php?bannerid=0&campaignid=0&zoneid=25&loc=https%3A%2F%2Fsegmentfault.com%2F&referer=&cb=d5f3c9e3e3"
+          "logo": "images/2024/partners/partner_logo_segmentfault.png"
         },
         {
           "name": "ITPUB",
           "link": "https://www.itpub.net",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='30' fill='%23d32f2f'%3EITPUB%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_itpub.png"
         },
         {
           "name": "GitCode",
           "link": "https://gitcode.com/",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='24' fill='%23e53935'%3EGitCode%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_gitcode.png"
         },
         {
           "name": "MSUP",
           "link": "https://msup.com.cn/",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='30' fill='%23000'%3Emsup%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_msup.png"
         },
         {
           "name": "RTE Community",
           "link": "https://www.rtecommunity.dev",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Arial' font-size='24' fill='%231976d2'%3ERTE%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_rte.png"
         }
       ]
     },
@@ -62,7 +62,7 @@
         {
           "name": "盛信视频号",
           "link": "https://channels.weixin.qq.com/platform/live/liveReplayHistory",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='40' height='40' x='10' y='10' rx='8' fill='%234a90e2'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='20' fill='%234a90e2'%3ESimba Innovation%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_simba.png"
         }
       ]
     },
@@ -72,12 +72,12 @@
         {
           "name": "开源中国",
           "link": "https://www.oschina.net/",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='%2300a86b'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='20' fill='%2300a86b'%3EOSCHINA%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_oschina.png"
         },
         {
           "name": "CSDN",
           "link": "https://www.csdn.net",
-          "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='%23fc5531'/%3E%3Ctext x='60' y='38' font-family='Arial' font-size='24' fill='%23fc5531'%3ECSDN%3C/text%3E%3C/svg%3E"
+          "logo": "images/2024/partners/partner_logo_csdn.png"
         }
       ]
     }
