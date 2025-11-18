@@ -263,8 +263,8 @@ function renderContent(year) {
     // 演讲议程
     renderAgenda(data.agenda);
     
-    // 组委会
-    renderCommittee(data.committee);
+    // 组委会（包括顾问、评审和组委会成员）
+    renderCommittee(data);
 }
 
 // 渲染活动介绍
