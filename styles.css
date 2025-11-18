@@ -1421,3 +1421,81 @@ main {
         justify-content: flex-start;
     }
 }
+
+
+/* 组委会分组样式 */
+.committee-section {
+    margin-bottom: 60px;
+}
+
+.committee-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.committee-section-header .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+}
+
+.committee-section-header .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* 组委会导航按钮（如果需要） */
+.committee-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.committee-nav-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.committee-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.committee-nav-btn.active {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}
+
+.committee-nav-btn .nav-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .committee-section-header .section-title {
+        font-size: 24px;
+    }
+    
+    .committee-section-header .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .committee-nav-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
