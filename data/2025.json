@@ -898,6 +898,58 @@
         }
       ],
       "poster": "images/2024/amarathon12/lixiaofei.png"
+    },
+    {
+      "name": "蒋南希 Nancy Jiang",
+      "position": "Amazon Builder Marketing Manager",
+      "job": "主持人",
+      "jobEn": "Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/nancy526/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/jiangnanxi.png"
+    },
+    {
+      "name": "李炜波 Weibo LI",
+      "position": "Amazon Account Rep (STP)",
+      "job": "主持人",
+      "jobEn": "Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/weibo-li-295810234/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/liweibo.png"
+    },
+    {
+      "name": "李晓彧 Alex Lee",
+      "position": "Amazon Account Rep (STP)",
+      "job": "主持人",
+      "jobEn": "Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/alex-lee-7266b4311/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/lixiaoyu.png"
+    },
+    {
+      "name": "赵雪妍 Shane Zhao",
+      "position": "Amazon BD Rep Intern (STP)",
+      "job": "主持人",
+      "jobEn": "Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/xueyan-shane-zhao-a251211a4/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/zhaoxueyan.png"
     }
   ],
   "judges": [
@@ -938,6 +990,132 @@
         }
       ],
       "poster": "images/2024/amarathon12/panjuan.png"
+    },
+    {
+      "name": "李少奕 Shaoyi Li",
+      "position": "Amarathon Committee 技术负责人",
+      "positionEn": "Technical Solutions and Contents Lead for the Amarathon Committee",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://s12d.com/xiaolige",
+          "src": "images/social-icons/xiaohongshu.png"
+        },
+        {
+          "url": "https://blog.csdn.net/m0_66628975?spm=1000.2115.3001.5343",
+          "src": "images/social-icons/csdn.png"
+        },
+        {
+          "url": "https://www.douyin.com/user/MS4wLjABAAAAtx-CKisQ1-JnW0-2Kezisl5MuX5v--VWEiDFCeiG06JgVH11GszdFdum2krMNZZH?vid=7395431332580461839",
+          "src": "images/social-icons/douyin.png"
+        },
+        {
+          "url": "https://www.linkedin.com/in/shaoyi-li-096835140/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/lishaoyi.png"
+    },
+    {
+      "name": "许业宝 Yebao Xu",
+      "position": "Amarathon Committee 讲师招募负责人",
+      "positionEn": "Amarathon Committee Responsible for speaker recruitment",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://xybdiy.blog.csdn.net/",
+          "src": "images/social-icons/csdn.png"
+        },
+        {
+          "url": "https://www.linkedin.com/in/yebao-xu-aa9283201/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/xuyebao.png"
+    },
+    {
+      "name": "黄浩文 Haowen Huang",
+      "position": "Senior Developer Advocate 资深开发者布道师",
+      "positionEn": "Amazon Senior Developer Advocate Senior Developer Evangelist",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/haowenhuang/",
+          "src": "images/social-icons/linkedin.png"
+        },
+        {
+          "url": "https://www.youtube.com/@haowenhuang",
+          "src": "images/social-icons/youtube.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/huanghaowen.png"
+    },
+    {
+      "name": "陈豪杰 Jacky Chan",
+      "position": "Amazon Community Builder - ML & GenAI 香港成员",
+      "positionEn": "Amazon Community Builder - ML & GenAI, Hong Kong",
+      "job": "内容评审、主持人",
+      "jobEn": "Responsible for reviewing speaker proposals, Host",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/jhkchan/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/jackychan.png"
+    },
+    {
+      "name": "宋洪涛 Hongtao Song",
+      "position": "亚马逊云科技资深人工智能产品市场经理",
+      "positionEn": "Senior AI Product Marketing Manager",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [
+        {
+          "url": "https://www.linkedin.com/in/hongtao-song-8233896a/",
+          "src": "images/social-icons/linkedin.png"
+        }
+      ],
+      "poster": "images/2024/amarathon12/songhongtao.png"
+    },
+    {
+      "name": "张帆 Fan Zhang",
+      "position": "亚马逊云科技开发者市场经理",
+      "positionEn": "Builder Marketing Manager",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [],
+      "poster": "images/2024/amarathon12/zhangfan.png"
+    },
+    {
+      "name": "陈烈 Charlie Chen",
+      "position": "亚马逊云科技资深产品市场经理",
+      "positionEn": "Senior Product Marketing Manager",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [],
+      "poster": "images/2024/amarathon12/chenlie.png"
+    },
+    {
+      "name": "段海宁 Duan Haining",
+      "position": "亚马逊云科技开发者市场经理",
+      "positionEn": "Builder Marketing Manager",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [],
+      "poster": "images/2024/amarathon12/duanhaining.png"
+    },
+    {
+      "name": "梁加琦 Liang Jiaqi",
+      "position": "亚马逊云科技资深市场经理",
+      "positionEn": "Senior Marketing Manager",
+      "job": "内容评审",
+      "jobEn": "Responsible for reviewing speaker proposals",
+      "share": [],
+      "poster": "images/2024/amarathon12/liangjiaqi.png"
     }
   ],
   "advisers": [
