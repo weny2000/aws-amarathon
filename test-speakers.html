@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试多演讲者显示</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .test-header {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-header h1 {
+            margin: 0 0 10px 0;
+            color: #1a1a1a;
+        }
+        .test-header p {
+            margin: 0;
+            color: #64748b;
+        }
+        .test-section {
+            margin-bottom: 30px;
+        }
+        .test-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 20px; max-width: 1200px; margin: 0 auto;">
+        <div class="test-header">
+            <h1>🎯 多演讲者显示测试</h1>
+            <p>测试合并后的议程项，演讲者以数组形式并列显示</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>议程 ID 16: 十字路口圆桌（2位演讲者）</h2>
+            <div id="test-container-16"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>议程 ID 18: 探险家、深潜者、领航员（4位演讲者）</h2>
+            <div id="test-container-18"></div>
+        </div>
+    </div>
+
+    <script>
+        // 加载数据并测试
+        fetch('data/2025.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log('总议程数量:', data.agenda.length);
+                
+                // 测试ID 16
+                const item16 = data.agenda.find(a => a.id === 16);
+                if (item16) {
+                    console.log('ID 16 议程:', item16.sessionTitle);
+                    console.log('演讲者数量:', item16.speakers ? item16.speakers.length : 0);
+                    renderAgendaItem(item16, 'test-container-16');
+                }
+                
+                // 测试ID 18
+                const item18 = data.agenda.find(a => a.id === 18);
+                if (item18) {
+                    console.log('ID 18 议程:', item18.sessionTitle);
+                    console.log('演讲者数量:', item18.speakers ? item18.speakers.length : 0);
+                    renderAgendaItem(item18, 'test-container-18');
+                }
+            })
+            .catch(err => {
+                console.error('加载数据失败:', err);
+                document.body.innerHTML += '<p style="color: red;">加载数据失败: ' + err.message + '</p>';
+            });
+        
+        function renderAgendaItem(item, containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            container.innerHTML = `
+                <div class="agenda-card">
+                    <div class="agenda-badge level-200">${item.sessionLevel}</div>
+                    <div class="agenda-card-content">
+                        <div class="agenda-time-section">
+                            <div class="time-item">
+                                <span class="timezone-label">UTC</span>
+                                <span class="time-value">${item.sessionTimeUTC}</span>
+                            </div>
+                            <div class="time-item">
+                                <span class="timezone-label">Beijing</span>
+                                <span class="time-value">${item.sessionTimeBeijing}</span>
+                            </div>
+                            <div class="language-badge">
+                                <span class="language-icon">🇨🇳</span>
+                                <span>${item.language}</span>
+                            </div>
+                        </div>
+                        <div class="agenda-right-section">
+                            <div class="agenda-desc-section">
+                                <h3 class="session-title">${item.sessionTitle}</h3>
+                            </div>
+                            <div class="agenda-bottom-section">
+                                ${item.speakers && Array.isArray(item.speakers) ? `
+                                    <div class="speakers-list">
+                                        ${item.speakers.map(speaker => `
+                                            <div class="speaker-info">
+                                                ${speaker.photo ? `
+                                                    <img src="${speaker.photo}" alt="${speaker.firstName} ${speaker.lastName}" class="speaker-photo">
+                                                ` : `
+                                                    <div class="speaker-avatar">${(speaker.firstName || 'S').charAt(0)}</div>
+                                                `}
+                                                <div class="speaker-details">
+                                                    <div class="speaker-name">${speaker.firstName} ${speaker.lastName}</div>
+                                                    ${speaker.title ? `<div class="speaker-title">${speaker.title}</div>` : ''}
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                ` : '没有演讲者信息'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
