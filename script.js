@@ -299,6 +299,8 @@ function updateTabVisibility(year, data) {
     const visibility = data.tabVisibility || getDefaultTabVisibility(year, data);
     
     // 更新每个Tab的显示状态
+    let currentTabVisible = true;
+    
     Object.keys(tabs).forEach(tabName => {
         const tab = tabs[tabName];
         const shouldShow = visibility[tabName] !== false;
@@ -307,14 +309,19 @@ function updateTabVisibility(year, data) {
             tab.btn.style.display = shouldShow ? 'inline-block' : 'none';
         }
         
-        // 如果当前Tab被隐藏，切换到第一个可见的Tab
-        if (!shouldShow && AppState.currentTab === tabName) {
-            const firstVisibleTab = Object.keys(tabs).find(name => visibility[name] !== false);
-            if (firstVisibleTab) {
-                selectTab(firstVisibleTab);
-            }
+        // 检查当前Tab是否可见
+        if (tabName === AppState.currentTab && !shouldShow) {
+            currentTabVisible = false;
         }
     });
+    
+    // 只有当前Tab不可见时才切换到第一个可见的Tab
+    if (!currentTabVisible) {
+        const firstVisibleTab = Object.keys(tabs).find(name => visibility[name] !== false);
+        if (firstVisibleTab) {
+            selectTab(firstVisibleTab);
+        }
+    }
 }
 
 // 获取默认Tab显示规则
