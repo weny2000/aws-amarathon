@@ -43,12 +43,18 @@ data/
 ### 基础信息
 - `banner`: 横幅图片信息
 - `introduction`: 活动介绍（标题、副标题、主题）
+  - `title`: 活动标题
+  - `subtitle`: 中文副标题
+  - `subtitleEn`: 英文副标题
+  - `theme`: 活动主题
+  - `themeDescription`: 主题描述
+  - `termsLink`: （可选）活动条款链接，显示在介绍卡片底部
 - `announcement`: 活动公告
 
 ### 特殊字段（可选）
 - `liveStatus`: 直播状态（仅2024年有）
 - `slackInvite`: Slack邀请链接
-- `termsLink`: 条款链接
+- `termsLink`: 顶层条款链接（显示在直播状态区域）
 - `partners`: 合作伙伴信息
 - `liveSchedule`: 直播安排
 

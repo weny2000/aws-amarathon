@@ -287,6 +287,13 @@ function renderIntroduction(introduction) {
                 <p class="theme-title">${introduction.theme}</p>
                 <p class="theme-description">${introduction.themeDescription}</p>
             </div>
+            ${introduction.termsLink ? `
+                <div class="intro-terms">
+                    <a href="${introduction.termsLink}" target="_blank" rel="noopener noreferrer" class="terms-link">
+                        📄 活动条款 Terms and Conditions
+                    </a>
+                </div>
+            ` : ''}
         </div>
     `;
 }
