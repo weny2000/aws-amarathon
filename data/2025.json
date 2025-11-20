@@ -15,7 +15,7 @@
     "gallery-section": false
   },
   "banner": {
-    "image": "images/2025/Agenda.jpg",
+    "image": "images/poster.png",
     "alt": "Amarathon 2025"
   },
   "introduction": {
@@ -24,7 +24,7 @@
     "subtitleEn": "\"Amarathon\" is a 12-hour online event initiated by the 亚马逊云科技 China User Group (CN-UG). The name \"Amarathon\" is derived from the combination of Amazon and Marathon, symbolizing the spirit of continuous sharing and exploration.",
     "theme": "\"Innovation Unleashed\"",
     "themeDescription": "今年的活动主题为 \"Innovation Unleashed\"，释放创新潜能，探索云计算与AI的无限可能！",
-    "termsLink": "assert/2025/amarathon%20terms%20and%20conditions%202025%20v3.pdf"
+    "images": ["images/2025/Agenda.jpg"]
   },
   "termsPdfUrl": "assert/2025/amarathon%20terms%20and%20conditions%202025%20v3.pdf",
   "announcement": {

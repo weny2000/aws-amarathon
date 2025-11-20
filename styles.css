@@ -331,6 +331,37 @@ main.container {
     filter: brightness(1.1);
 }
 
+.intro-images {
+    margin-top: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.intro-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 单张图片时全宽显示 */
+.intro-images:has(.intro-image:only-child) {
+    grid-template-columns: 1fr;
+}
+
+/* 两张图片时各占一半 */
+.intro-images:has(.intro-image:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* ========================================
    直播安排
    ======================================== */
@@ -1373,6 +1404,11 @@ main.container {
     
     .theme-description {
         font-size: 14px;
+    }
+    
+    .intro-images {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
     }
     
     .live-schedule-card {

@@ -397,6 +397,31 @@ function renderIntroduction(introduction) {
     
     if (section) section.style.display = 'block';
     
+    // 生成图片区域HTML
+    let imagesHtml = '';
+    if (introduction.images && Array.isArray(introduction.images) && introduction.images.length > 0) {
+        const imagesContent = introduction.images.map(img => {
+            if (typeof img === 'string') {
+                // 如果是字符串，直接作为图片URL
+                return `<img src="${img}" alt="活动图片" class="intro-image">`;
+            } else if (img.url || img.image) {
+                // 如果是对象，支持url/image字段和alt字段
+                const imgUrl = img.url || img.image;
+                const imgAlt = img.alt || img.caption || '活动图片';
+                return `<img src="${imgUrl}" alt="${imgAlt}" class="intro-image">`;
+            }
+            return '';
+        }).filter(html => html).join('');
+        
+        if (imagesContent) {
+            imagesHtml = `
+                <div class="intro-images">
+                    ${imagesContent}
+                </div>
+            `;
+        }
+    }
+    
     container.innerHTML = `
         <div class="introduction-card">
             <p class="intro-title">${introduction.title}</p>
@@ -413,6 +438,7 @@ function renderIntroduction(introduction) {
                     </a>
                 </div>
             ` : ''}
+            ${imagesHtml}
         </div>
     `;
 }
