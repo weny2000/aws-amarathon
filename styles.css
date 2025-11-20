@@ -69,41 +69,8 @@ body {
 }
 
 /* ========================================
-   顶部导航
+   顶部导航 - 已移除
    ======================================== */
-.top-nav {
-    background: var(--aws-dark);
-    padding: var(--spacing-sm) 0;
-    border-bottom: 3px solid var(--aws-orange);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-img.aws-logo {
-    width: 135px;
-    height: 42px;
-    object-fit: contain;
-}
-
-.divider {
-    color: #fff;
-    opacity: 0.5;
-    font-size: 20px;
-}
-
-.site-name {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-}
 
 /* ========================================
    活动横幅（全宽）
@@ -147,7 +114,7 @@ img.aws-logo {
     background: var(--bg-white);
     border-bottom: 1px solid var(--border-light);
     position: sticky;
-    top: 61px;
+    top: 0;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -190,7 +157,7 @@ img.aws-logo {
     background: var(--bg-white);
     border-bottom: 1px solid var(--border-light);
     position: sticky;
-    top: 109px;
+    top: 48px;
     z-index: 998;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -1361,19 +1328,6 @@ main.container {
         --spacing-2xl: 48px;
     }
     
-    .top-nav {
-        padding: 12px 0;
-    }
-    
-    img.aws-logo {
-        width: 100px;
-        height: 32px;
-    }
-    
-    .site-name {
-        font-size: 16px;
-    }
-    
     .banner-section-full .banner-placeholder {
         height: 200px;
         font-size: 32px;
@@ -1552,7 +1506,6 @@ main.container {
    打印样式
    ======================================== */
 @media print {
-    .top-nav,
     .year-selector-section,
     .sub-nav-section,
     .footer {
