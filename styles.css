@@ -81,6 +81,14 @@ body {
     background: transparent;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-section-full .banner-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
 }
 
 .banner-nav {
@@ -101,7 +109,7 @@ body {
     display: block;
 }
 
-.banner-section-full #bannerContent {
+.banner-section-full .banner-wrapper #bannerContent {
     width: 100%;
     margin: 0;
     padding: 0;
