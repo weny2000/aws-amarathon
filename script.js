@@ -345,7 +345,7 @@ function hasCommitteeData(data) {
 // 更新区域显示状态（智能隐藏）
 function updateSectionVisibility(data) {
     const sections = {
-        'banner-section': !!data.banner,
+        'banner-section-full': !!data.banner,
         'introduction-section': !!data.introduction,
         'live-schedule-section': !!data.liveSchedule,
         'live-status-section': !!data.liveStatus,
@@ -1026,22 +1026,20 @@ function renderTerms(termsPdfUrl) {
         return;
     }
     
+    // 添加URL参数来隐藏PDF查看器的工具栏和侧边栏
+    const pdfUrl = `${termsPdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`;
+    
     container.innerHTML = `
         <div class="terms-pdf-container">
-            <div class="terms-toolbar">
-                <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer" class="terms-download-btn">
-                    📥 下载PDF Download PDF
-                </a>
-            </div>
             <iframe 
-                src="${termsPdfUrl}" 
+                src="${pdfUrl}" 
                 class="terms-pdf-viewer"
                 frameborder="0"
                 title="活动条款 Terms and Conditions">
             </iframe>
             <div class="terms-fallback">
-                <p>如果PDF无法显示，请 <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">点击这里下载</a></p>
-                <p>If the PDF cannot be displayed, please <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">click here to download</a></p>
+                <p>如果PDF无法显示，请 <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">点击这里查看</a></p>
+                <p>If the PDF cannot be displayed, please <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">click here to view</a></p>
             </div>
         </div>
     `;
