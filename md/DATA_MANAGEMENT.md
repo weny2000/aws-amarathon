@@ -55,8 +55,15 @@ data/
 - `liveStatus`: 直播状态（仅2024年有）
 - `slackInvite`: Slack邀请链接
 - `termsLink`: 顶层条款链接（显示在直播状态区域）
+- `termsPdfUrl`: PDF条款链接（2025年显示在活动条款Tab）
 - `partners`: 合作伙伴信息
 - `liveSchedule`: 直播安排
+
+### 显示控制（可选）
+- `tabVisibility`: Tab显示配置（手动控制Tab显示/隐藏）
+- `sectionVisibility`: 区域显示配置（手动控制区域显示/隐藏）
+
+**注意**: 如果不配置，系统会根据数据自动判断是否显示。详见 [智能显示系统文档](SMART_VISIBILITY_SYSTEM.md)
 
 ### 内容数据
 - `userGroups`: 用户组分布

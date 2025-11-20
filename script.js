@@ -250,8 +250,9 @@ function renderContent(year) {
         return;
     }
     
-    // 更新Tab显示状态
-    updateTabVisibility(year);
+    // 更新Tab和区域显示状态
+    updateTabVisibility(year, data);
+    updateSectionVisibility(data);
     
     // 活动主页
     renderBanner(data.banner);
@@ -273,36 +274,112 @@ function renderContent(year) {
     renderTerms(data.termsPdfUrl);
 }
 
-// 更新Tab显示状态
-function updateTabVisibility(year) {
-    const committeeBtn = document.querySelector('[onclick="selectTab(\'committee\')"]');
-    const committeeTab = document.getElementById('committeeTab');
-    const termsBtn = document.querySelector('[onclick="selectTab(\'terms\')"]');
-    const termsTab = document.getElementById('termsTab');
+// 更新Tab显示状态（智能隐藏）
+function updateTabVisibility(year, data) {
+    const tabs = {
+        home: {
+            btn: document.querySelector('[onclick="selectTab(\'home\')"]'),
+            content: document.getElementById('homeTab')
+        },
+        agenda: {
+            btn: document.querySelector('[onclick="selectTab(\'agenda\')"]'),
+            content: document.getElementById('agendaTab')
+        },
+        committee: {
+            btn: document.querySelector('[onclick="selectTab(\'committee\')"]'),
+            content: document.getElementById('committeeTab')
+        },
+        terms: {
+            btn: document.querySelector('[onclick="selectTab(\'terms\')"]'),
+            content: document.getElementById('termsTab')
+        }
+    };
     
-    // 2025年隐藏组委会Tab，显示活动条款Tab
-    if (year == 2025) {
-        if (committeeBtn) committeeBtn.style.display = 'none';
-        if (committeeTab) committeeTab.style.display = 'none';
-        if (termsBtn) termsBtn.style.display = 'inline-block';
+    // 获取显示配置（优先使用数据中的配置，否则使用默认规则）
+    const visibility = data.tabVisibility || getDefaultTabVisibility(year, data);
+    
+    // 更新每个Tab的显示状态
+    Object.keys(tabs).forEach(tabName => {
+        const tab = tabs[tabName];
+        const shouldShow = visibility[tabName] !== false;
         
-        // 如果当前在组委会Tab，切换到活动主页
-        if (AppState.currentTab === 'committee') {
-            selectTab('home');
+        if (tab.btn) {
+            tab.btn.style.display = shouldShow ? 'inline-block' : 'none';
         }
-    } else {
-        if (committeeBtn) committeeBtn.style.display = 'inline-block';
-        if (committeeTab && AppState.currentTab === 'committee') {
-            committeeTab.style.display = 'block';
-        }
-        if (termsBtn) termsBtn.style.display = 'none';
-        if (termsTab) termsTab.style.display = 'none';
         
-        // 如果当前在活动条款Tab，切换到活动主页
-        if (AppState.currentTab === 'terms') {
-            selectTab('home');
+        // 如果当前Tab被隐藏，切换到第一个可见的Tab
+        if (!shouldShow && AppState.currentTab === tabName) {
+            const firstVisibleTab = Object.keys(tabs).find(name => visibility[name] !== false);
+            if (firstVisibleTab) {
+                selectTab(firstVisibleTab);
+            }
         }
-    }
+    });
+}
+
+// 获取默认Tab显示规则
+function getDefaultTabVisibility(year, data) {
+    const visibility = {
+        home: true, // 活动主页始终显示
+        agenda: hasAgendaData(data), // 有议程数据时显示
+        committee: hasCommitteeData(data) && year != 2025, // 有组委会数据且不是2025年
+        terms: !!data.termsPdfUrl && year == 2025 // 有PDF链接且是2025年
+    };
+    
+    return visibility;
+}
+
+// 检查是否有议程数据
+function hasAgendaData(data) {
+    return data.agenda && Array.isArray(data.agenda) && data.agenda.length > 0;
+}
+
+// 检查是否有组委会数据
+function hasCommitteeData(data) {
+    const hasCommittee = data.committee && Array.isArray(data.committee) && data.committee.length > 0;
+    const hasJudges = data.judges && Array.isArray(data.judges) && data.judges.length > 0;
+    const hasAdvisers = data.advisers && Array.isArray(data.advisers) && data.advisers.length > 0;
+    return hasCommittee || hasJudges || hasAdvisers;
+}
+
+// 更新区域显示状态（智能隐藏）
+function updateSectionVisibility(data) {
+    const sections = {
+        'banner-section': !!data.banner,
+        'introduction-section': !!data.introduction,
+        'live-schedule-section': !!data.liveSchedule,
+        'live-status-section': !!data.liveStatus,
+        'partners-section': hasPartnersData(data.partners),
+        'announcement-section': !!data.announcement,
+        'gallery-section': hasGalleryData(data.gallery)
+    };
+    
+    // 获取显示配置（优先使用数据中的配置）
+    const visibility = data.sectionVisibility || sections;
+    
+    // 更新每个区域的显示状态
+    Object.keys(visibility).forEach(sectionClass => {
+        const section = document.querySelector(`.${sectionClass}`);
+        if (section) {
+            section.style.display = visibility[sectionClass] ? 'block' : 'none';
+        }
+    });
+}
+
+// 检查是否有合作伙伴数据
+function hasPartnersData(partners) {
+    if (!partners) return false;
+    
+    const hasLiveAlliance = partners.liveAlliance?.partners?.length > 0;
+    const hasPlatinum = partners.platinumSponsor?.partners?.length > 0;
+    const hasCommunity = partners.communityPartners?.partners?.length > 0;
+    
+    return hasLiveAlliance || hasPlatinum || hasCommunity;
+}
+
+// 检查是否有图片数据
+function hasGalleryData(gallery) {
+    return gallery && Array.isArray(gallery) && gallery.length > 0;
 }
 
 // 渲染活动介绍
@@ -343,17 +420,13 @@ function renderIntroduction(introduction) {
 // 渲染直播安排
 function renderLiveSchedule(liveSchedule) {
     const container = document.getElementById('liveScheduleContent');
-    const section = document.querySelector('.live-schedule-section');
     
     if (!container) return;
     
     if (!liveSchedule) {
         container.innerHTML = '';
-        if (section) section.style.display = 'none';
         return;
     }
-    
-    if (section) section.style.display = 'block';
     
     container.innerHTML = `
         <div class="live-schedule-container">
@@ -403,17 +476,13 @@ function renderLiveSchedule(liveSchedule) {
 // 渲染直播状态
 function renderLiveStatus(liveStatus, slackInvite, termsLink) {
     const container = document.getElementById('liveStatusContent');
-    const section = document.querySelector('.live-status-section');
     
     if (!container) return;
     
     if (!liveStatus) {
         container.innerHTML = '';
-        if (section) section.style.display = 'none';
         return;
     }
-    
-    if (section) section.style.display = 'block';
     
     container.innerHTML = `
         <div class="live-status-card">
@@ -446,28 +515,13 @@ function renderLiveStatus(liveStatus, slackInvite, termsLink) {
 // 渲染合作伙伴
 function renderPartners(partners) {
     const container = document.getElementById('partnersContent');
-    const section = document.querySelector('.partners-section');
     
     if (!container) return;
     
     if (!partners) {
         container.innerHTML = '';
-        if (section) section.style.display = 'none';
         return;
     }
-    
-    // 检查是否有任何合作伙伴数据
-    const hasAnyPartners = (partners.liveAlliance?.partners?.length > 0) ||
-                          (partners.platinumSponsor?.partners?.length > 0) ||
-                          (partners.communityPartners?.partners?.length > 0);
-    
-    if (!hasAnyPartners) {
-        container.innerHTML = '';
-        if (section) section.style.display = 'none';
-        return;
-    }
-    
-    if (section) section.style.display = 'block';
     
     let html = '<div class="partners-container">';
     

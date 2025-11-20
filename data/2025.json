@@ -1,4 +1,19 @@
 {
+  "tabVisibility": {
+    "home": true,
+    "agenda": false,
+    "committee": false,
+    "terms": true
+  },
+  "sectionVisibility": {
+    "banner-section": true,
+    "introduction-section": false,
+    "live-schedule-section": false,
+    "live-status-section": false,
+    "partners-section": false,
+    "announcement-section": false,
+    "gallery-section": false
+  },
   "banner": {
     "image": "images/2025/Agenda.jpg",
     "alt": "Amarathon 2025"

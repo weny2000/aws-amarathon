@@ -1,4 +1,19 @@
 {
+  "tabVisibility": {
+    "home": true,
+    "agenda": true,
+    "committee": true,
+    "terms": false
+  },
+  "sectionVisibility": {
+    "banner-section": true,
+    "introduction-section": true,
+    "live-schedule-section": true,
+    "live-status-section": true,
+    "partners-section": true,
+    "announcement-section": true,
+    "gallery-section": true
+  },
   "banner": {
     "image": "",
     "alt": "Amarathon 2024"
