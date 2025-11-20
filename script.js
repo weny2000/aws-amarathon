@@ -250,6 +250,9 @@ function renderContent(year) {
         return;
     }
     
+    // 更新Tab显示状态
+    updateTabVisibility(year);
+    
     // 活动主页
     renderBanner(data.banner);
     renderIntroduction(data.introduction);
@@ -267,16 +270,42 @@ function renderContent(year) {
     renderCommittee(data);
 }
 
+// 更新Tab显示状态
+function updateTabVisibility(year) {
+    const committeeBtn = document.querySelector('[onclick="selectTab(\'committee\')"]');
+    const committeeTab = document.getElementById('committeeTab');
+    
+    // 2025年隐藏组委会Tab
+    if (year == 2025) {
+        if (committeeBtn) committeeBtn.style.display = 'none';
+        if (committeeTab) committeeTab.style.display = 'none';
+        
+        // 如果当前在组委会Tab，切换到活动主页
+        if (AppState.currentTab === 'committee') {
+            selectTab('home');
+        }
+    } else {
+        if (committeeBtn) committeeBtn.style.display = 'inline-block';
+        if (committeeTab && AppState.currentTab === 'committee') {
+            committeeTab.style.display = 'block';
+        }
+    }
+}
+
 // 渲染活动介绍
 function renderIntroduction(introduction) {
     const container = document.getElementById('introductionContent');
+    const section = document.querySelector('.introduction-section');
     
     if (!container) return;
     
     if (!introduction) {
         container.innerHTML = '';
+        if (section) section.style.display = 'none';
         return;
     }
+    
+    if (section) section.style.display = 'block';
     
     container.innerHTML = `
         <div class="introduction-card">
@@ -301,13 +330,17 @@ function renderIntroduction(introduction) {
 // 渲染直播安排
 function renderLiveSchedule(liveSchedule) {
     const container = document.getElementById('liveScheduleContent');
+    const section = document.querySelector('.live-schedule-section');
     
     if (!container) return;
     
     if (!liveSchedule) {
         container.innerHTML = '';
+        if (section) section.style.display = 'none';
         return;
     }
+    
+    if (section) section.style.display = 'block';
     
     container.innerHTML = `
         <div class="live-schedule-container">
@@ -357,13 +390,17 @@ function renderLiveSchedule(liveSchedule) {
 // 渲染直播状态
 function renderLiveStatus(liveStatus, slackInvite, termsLink) {
     const container = document.getElementById('liveStatusContent');
+    const section = document.querySelector('.live-status-section');
     
     if (!container) return;
     
     if (!liveStatus) {
         container.innerHTML = '';
+        if (section) section.style.display = 'none';
         return;
     }
+    
+    if (section) section.style.display = 'block';
     
     container.innerHTML = `
         <div class="live-status-card">
@@ -396,13 +433,28 @@ function renderLiveStatus(liveStatus, slackInvite, termsLink) {
 // 渲染合作伙伴
 function renderPartners(partners) {
     const container = document.getElementById('partnersContent');
+    const section = document.querySelector('.partners-section');
     
     if (!container) return;
     
     if (!partners) {
         container.innerHTML = '';
+        if (section) section.style.display = 'none';
         return;
     }
+    
+    // 检查是否有任何合作伙伴数据
+    const hasAnyPartners = (partners.liveAlliance?.partners?.length > 0) ||
+                          (partners.platinumSponsor?.partners?.length > 0) ||
+                          (partners.communityPartners?.partners?.length > 0);
+    
+    if (!hasAnyPartners) {
+        container.innerHTML = '';
+        if (section) section.style.display = 'none';
+        return;
+    }
+    
+    if (section) section.style.display = 'block';
     
     let html = '<div class="partners-container">';
     

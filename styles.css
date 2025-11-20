@@ -258,8 +258,6 @@ main {
 
 .intro-terms {
     margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid var(--aws-border);
     text-align: center;
 }
 
@@ -267,21 +265,22 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--aws-orange);
+    color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    padding: 10px 20px;
-    border: 2px solid var(--aws-orange);
-    border-radius: 4px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    border-radius: 8px;
+    border: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .intro-terms .terms-link:hover {
-    background-color: var(--aws-orange);
-    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    filter: brightness(1.1);
 }
 
 /* 直播安排 */

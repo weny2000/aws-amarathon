@@ -32,9 +32,9 @@
 ### 3. 显示效果
 
 当配置了 `termsLink` 后，会在活动介绍卡片底部显示：
-- 一条分隔线
-- 一个橙色边框的按钮，显示 "📄 活动条款 Terms and Conditions"
-- 鼠标悬停时按钮会有动画效果（背景变橙色，轻微上移）
+- 一个渐变紫粉色按钮，显示 "📄 活动条款 Terms and Conditions"
+- 按钮样式与页面整体风格一致（使用相同的渐变色）
+- 鼠标悬停时按钮会有动画效果（轻微上移、阴影增强、亮度提升）
 - 点击后在新标签页打开条款文档
 
 ## 示例
@@ -75,8 +75,8 @@
 
 2. **styles.css** - 新增样式
    - `.intro-terms` - 条款链接容器样式
-   - `.intro-terms .terms-link` - 链接按钮样式
-   - `.intro-terms .terms-link:hover` - 悬停效果
+   - `.intro-terms .terms-link` - 渐变紫粉色按钮样式（与页面整体风格一致）
+   - `.intro-terms .terms-link:hover` - 悬停效果（上移、阴影、亮度）
 
 3. **data/template.json** - 模板更新
    - 在 `introduction` 对象中添加了 `termsLink` 字段示例
@@ -85,5 +85,6 @@
 
 - 链接会在新标签页打开（`target="_blank"`）
 - 使用了 `rel="noopener noreferrer"` 确保安全性
-- 样式与网站整体设计保持一致（使用 AWS 橙色主题）
+- 按钮样式与网站整体设计保持一致（使用渐变紫粉色主题）
 - 响应式设计，在移动设备上也能正常显示
+- 如果没有直播安排、合作伙伴或直播状态数据，对应区域会自动隐藏
