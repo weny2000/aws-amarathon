@@ -6,7 +6,7 @@
     "terms": true
   },
   "sectionVisibility": {
-    "banner-section": true,
+    "banner-section": false,
     "introduction-section": false,
     "live-schedule-section": false,
     "live-status-section": false,
