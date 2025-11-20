@@ -11,6 +11,7 @@
     "themeDescription": "今年的活动主题描述",
     "termsLink": ""
   },
+  "termsPdfUrl": "",
   "announcement": {
     "title": "YYYY Amarathon 技术马拉松活动标题",
     "date": "YYYY年MM月DD日",

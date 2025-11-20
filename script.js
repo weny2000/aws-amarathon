@@ -268,17 +268,23 @@ function renderContent(year) {
     
     // 组委会（包括顾问、评审和组委会成员）
     renderCommittee(data);
+    
+    // 活动条款
+    renderTerms(data.termsPdfUrl);
 }
 
 // 更新Tab显示状态
 function updateTabVisibility(year) {
     const committeeBtn = document.querySelector('[onclick="selectTab(\'committee\')"]');
     const committeeTab = document.getElementById('committeeTab');
+    const termsBtn = document.querySelector('[onclick="selectTab(\'terms\')"]');
+    const termsTab = document.getElementById('termsTab');
     
-    // 2025年隐藏组委会Tab
+    // 2025年隐藏组委会Tab，显示活动条款Tab
     if (year == 2025) {
         if (committeeBtn) committeeBtn.style.display = 'none';
         if (committeeTab) committeeTab.style.display = 'none';
+        if (termsBtn) termsBtn.style.display = 'inline-block';
         
         // 如果当前在组委会Tab，切换到活动主页
         if (AppState.currentTab === 'committee') {
@@ -288,6 +294,13 @@ function updateTabVisibility(year) {
         if (committeeBtn) committeeBtn.style.display = 'inline-block';
         if (committeeTab && AppState.currentTab === 'committee') {
             committeeTab.style.display = 'block';
+        }
+        if (termsBtn) termsBtn.style.display = 'none';
+        if (termsTab) termsTab.style.display = 'none';
+        
+        // 如果当前在活动条款Tab，切换到活动主页
+        if (AppState.currentTab === 'terms') {
+            selectTab('home');
         }
     }
 }
@@ -946,6 +959,38 @@ function renderCommittee(data) {
     } else {
         container.innerHTML = html;
     }
+}
+
+// 渲染活动条款
+function renderTerms(termsPdfUrl) {
+    const container = document.getElementById('termsContent');
+    
+    if (!container) return;
+    
+    if (!termsPdfUrl) {
+        container.innerHTML = '<div class="empty-state">暂无活动条款</div>';
+        return;
+    }
+    
+    container.innerHTML = `
+        <div class="terms-pdf-container">
+            <div class="terms-toolbar">
+                <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer" class="terms-download-btn">
+                    📥 下载PDF Download PDF
+                </a>
+            </div>
+            <iframe 
+                src="${termsPdfUrl}" 
+                class="terms-pdf-viewer"
+                frameborder="0"
+                title="活动条款 Terms and Conditions">
+            </iframe>
+            <div class="terms-fallback">
+                <p>如果PDF无法显示，请 <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">点击这里下载</a></p>
+                <p>If the PDF cannot be displayed, please <a href="${termsPdfUrl}" target="_blank" rel="noopener noreferrer">click here to download</a></p>
+            </div>
+        </div>
+    `;
 }
 
 // 显示空状态
